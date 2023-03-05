@@ -2,6 +2,8 @@
 using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using UnityEngine;
@@ -41,7 +43,7 @@ namespace NineStars
 #if DEBUG
         static bool Unload(UnityModManager.ModEntry modEntry)
         {
-            harmony.UnpatchAll();
+            harmony.UnpatchAll(modEntry.Info.Id);
 
             return true;
         }
@@ -54,32 +56,78 @@ namespace NineStars
         }
     }
 
-    // Reverse the speedup in GaleLogicOne
-    [HarmonyPatch(typeof(GaleLogicOne), "VariableUpdate")]
-    public static class Update_Patch
+    // Reverse the speedup in Gail-related methods
+    [HarmonyPatch]
+    class SpeedUpExceptions
     {
-        static int found = 0;
         static MethodInfo get_deltaTimeMethod = typeof(Time)
-                .GetProperty("deltaTime").GetGetMethod();
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+            .GetProperty("deltaTime").GetGetMethod();
+        static MethodInfo set_animSpeedMethod = typeof(Animator)
+            .GetProperty("speed").GetSetMethod();
+        static FieldInfo ukemiFramesField = typeof(ControlAdapter)
+            .GetField("num_frames_since_last_SPRINT_PRESSED");
+
+        static IEnumerable<MethodBase> TargetMethods()
         {
+            return AccessTools.GetDeclaredMethods(typeof(GaleLogicOne))
+                .Where(method => method.Name.EndsWith("Update") || method.Name.StartsWith("_STATE") ||
+                (new string[] { 
+                    "_IncreaseMiscCount",
+                    "__RestoreTagFromInjury",
+                    "_CheckForFallImpact",
+                    "_CheckForSlippage",
+                    "_HorizontalMovementInWater",
+                    "__NormalJumpConditions",
+                    "_MovementVx",
+                    "_LampDepletionPerFrame",
+                    "_JavelinOrGunMovement",
+                    "SendGaleCommand",
+                    "_GoToState",
+                    "_CrankLamp",
+                    "SA_animate"
+                }).Any(method.Name.Contains))
+                .Cast<MethodBase>();
+        }
+        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, MethodBase __originalMethod)
+        {
+
             foreach (var instruction in instructions)
             {
-                //if (instruction == new CodeInstruction(OpCodes.Call, get_deltaTimeMethod))
                 if (instruction.opcode == OpCodes.Call && instruction.operand == get_deltaTimeMethod)
                 {
-                    found++;
                     yield return instruction;
                     yield return CodeInstruction.LoadField(typeof(Main), "inverseSpeedUp");
                     yield return new CodeInstruction(OpCodes.Mul);
-                }   
+                }
+                else if (instruction.opcode == OpCodes.Callvirt && instruction.operand == set_animSpeedMethod)
+                {
+                    yield return CodeInstruction.LoadField(typeof(Main), "inverseSpeedUp");
+                    yield return new CodeInstruction(OpCodes.Mul);
+                    yield return instruction;
+                }
+                else if (instruction.opcode == OpCodes.Ldfld && instruction.operand == ukemiFramesField)
+                {
+                    yield return instruction;
+                    yield return new CodeInstruction (OpCodes.Conv_R4);
+                    yield return CodeInstruction.LoadField(typeof(Main), "inverseSpeedUp");
+                    yield return new CodeInstruction(OpCodes.Mul);
+                    yield return new CodeInstruction(OpCodes.Conv_I4);
+                }
                 else
                     yield return instruction;
             }
-            Main.logger.Log("found " + found + " instances of deltaTime");
         }
     }
-
+    [HarmonyPatch(typeof(Mover2), "PerformLedgeDrop")]
+    public static class LedgeDrop_Patch
+    {
+        public static void Prefix(ref float time_to_ignore_owp)
+        {
+            time_to_ignore_owp *= Main.speedUp;
+        }
+    }
+    
+    // Lower Health & Energy
     [HarmonyPatch(typeof(SaveFile), "_NS_ProcessSaveDataString")]
     public static class LoadSave_Patch
     {
@@ -96,7 +144,6 @@ namespace NineStars
             PT2.hud_stamina.J_InitializeStaminaHud(PT2.gale_interacter.stats.max_stamina);
         }
     }
-
     [HarmonyPatch(typeof(GaleLogicOne), "ApplyGaleUpgrade")]
     public static class Upgrade_Patch
     {
@@ -117,6 +164,24 @@ namespace NineStars
                 PT2.hud_stamina.J_UpgradeFX();
             }
             return false;
+        }
+    }
+
+    // Halve effect of energy buff
+    [HarmonyPatch(typeof(GaleLogicOne), "VariableUpdate")]
+    public static class Buff_Patch
+    {
+        public static void Postfix(ref GaleLogicOne __instance)
+        {
+            if (PT2.gale_interacter.stats.stamina_buff > 0f)
+            {
+                if (__instance.stamina_stun > 0f)
+                    __instance.stamina_stun += 2f * Main.inverseSpeedUp * Time.deltaTime;
+                else if (PT2.gale_interacter.stats.stamina < PT2.gale_interacter.stats.max_stamina)
+                    PT2.gale_interacter.stats.stamina -= 50f * Main.inverseSpeedUp * Time.deltaTime;
+
+                PT2.hud_stamina.J_SetCurrentStamina(PT2.gale_interacter.stats.stamina);
+            }
         }
     }
 }
