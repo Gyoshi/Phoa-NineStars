@@ -243,9 +243,9 @@ namespace NineStars
     public static class Exhaustion_Patch
     {
         private static float exhaustionTimer = 0f;
-        public static void Postfix(bool __result)
+        public static void Postfix(bool use_fx, bool __result)
         {
-            if (!__result && Time.unscaledTime > exhaustionTimer + 0.3f)
+            if (use_fx && !__result && Time.unscaledTime > exhaustionTimer + 0.3f)
             {
                 exhaustionTimer = Time.unscaledTime;
                 Main.IncurDamage(1);
