@@ -21,7 +21,7 @@ namespace NineStars
         public static int rubyHP = 1;
         public static float gemEnergy = 5f;
 
-        public static float speedUp = 2f;
+        public static float speedUp = 1.34164f;
         public static float inverseSpeedUp = 1f / speedUp;
 
         public static Harmony harmony;
@@ -57,9 +57,7 @@ namespace NineStars
 
         public static void IncurDamage(int damage, bool lethal = false)
         {
-            damage = (PT2.gale_interacter.stats.hp <= damage) ? (PT2.gale_interacter.stats.hp) : damage;
-            if (!lethal)
-                damage--;
+            damage = (PT2.gale_interacter.stats.hp <= damage) ? (PT2.gale_interacter.stats.hp - (lethal ? 0 : 1)) : damage;
 
             PT2.gale_interacter.stats.hp -= damage;
             PT2.hud_heart.J_UpdateHealth(PT2.gale_interacter.stats.hp, PT2.gale_interacter.stats.max_hp, false, false);
@@ -258,12 +256,14 @@ namespace NineStars
     [HarmonyPatch(typeof(GaleLogicOne), "_GetLandingLagAmt")]
     public static class FallDamage_Patch
     {
-        public static void Postfix(bool from_aerial_atk, float time_spent_falling)
+        static FieldInfo fallingTimeField = AccessTools.Field(typeof(GaleLogicOne), "_fall_time");
+        public static void Postfix()
         {
+            float fallingTime = (float)fallingTimeField.GetValue(PT2.gale_script);
             bool ukemi = PT2.director.control.num_frames_since_last_SPRINT_PRESSED < (int)(7 * Main.speedUp);
-            if (!from_aerial_atk && time_spent_falling > 0.67f && !ukemi)
+            if (fallingTime > 0.67f && !ukemi)
             {
-                int damage = (int)(time_spent_falling * 3f) - 1;
+                int damage = (int)(fallingTime * 3f) - 1;
                 Main.IncurDamage(damage, true);
 
                 float volume = (damage > 1) ? 0.85f : 0.7f;
