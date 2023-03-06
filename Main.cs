@@ -1,11 +1,10 @@
 ﻿using HarmonyLib;
-using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using TMPro;
 using UnityEngine;
 using UnityModManagerNet;
 
@@ -217,6 +216,16 @@ namespace NineStars
                 PT2.hud_stamina.J_UpgradeFX();
             }
             return false;
+        }
+    }
+    [HarmonyPatch(typeof(ItemGridLogic), "_SetMaxHp")]
+    public static class HPDisplay_Patch
+    {
+        static FieldInfo maxHpTextField = AccessTools.Field(typeof(ItemGridLogic), "_max_hp_text");
+        public static void Postfix(ref ItemGridLogic __instance)
+        {
+            TextMeshPro maxHpText = (TextMeshPro)maxHpTextField.GetValue(__instance);
+            maxHpText.text = PT2.gale_interacter.stats.max_hp.ToString();
         }
     }
 
