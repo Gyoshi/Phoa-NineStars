@@ -54,6 +54,22 @@ namespace NineStars
             if (Time.timeScale == 1f)
                 Time.timeScale = speedUp;
         }
+
+        public static void IncurDamage(int damage, bool lethal = false)
+        {
+            damage = (PT2.gale_interacter.stats.hp <= damage) ? (PT2.gale_interacter.stats.hp) : damage;
+            if (!lethal)
+                damage--;
+
+            PT2.gale_interacter.stats.hp -= damage;
+            PT2.hud_heart.J_UpdateHealth(PT2.gale_interacter.stats.hp, PT2.gale_interacter.stats.max_hp, false, false);
+            PT2.gale_interacter.DisplayNumAboveHead(damage, DamageNumberLogic.DISPLAY_STYLE.GALE_DAMAGE, true);
+
+            if (PT2.gale_interacter.stats.hp <= 0)
+                goToStateMethod.Invoke(PT2.gale_script, new object[] { Enum.Parse(galeStateEnum, "DYING"), 0f });
+        }
+        static MethodInfo goToStateMethod = AccessTools.Method(typeof(GaleLogicOne), "_GoToState");
+        static Type galeStateEnum = AccessTools.Inner(typeof(GaleLogicOne), "GALE_STATE");
     }
 
     // Reverse the speedup in Gail-related methods
@@ -221,6 +237,51 @@ namespace NineStars
 
                 PT2.hud_stamina.J_SetCurrentStamina(PT2.gale_interacter.stats.stamina);
             }
+        }
+    }
+
+    // Damage on energy overuse
+    [HarmonyPatch(typeof(GaleLogicOne), "_EnoughStamina")]
+    public static class Exhaustion_Patch
+    {
+        private static float exhaustionTimer = 0f;
+        public static void Postfix(bool __result)
+        {
+            if (!__result && Time.unscaledTime > exhaustionTimer + 0.3f)
+            {
+                exhaustionTimer = Time.unscaledTime;
+                Main.IncurDamage(1);
+            }
+        }
+    }
+    // Fall damage (on failed ukemi)
+    [HarmonyPatch(typeof(GaleLogicOne), "_GetLandingLagAmt")]
+    public static class FallDamage_Patch
+    {
+        public static void Postfix(bool from_aerial_atk, float time_spent_falling)
+        {
+            bool ukemi = PT2.director.control.num_frames_since_last_SPRINT_PRESSED < (int)(7 * Main.speedUp);
+            if (!from_aerial_atk && time_spent_falling > 0.67f && !ukemi)
+            {
+                int damage = (int)(time_spent_falling * 3f) - 1;
+                Main.IncurDamage(damage, true);
+
+                float volume = (damage > 1) ? 0.85f : 0.7f;
+                PT2.sound_g.PlayCommonSfx(180, PT2.gale_script.GetTransform().position, volume, 0f, global::GL.M_RandomPitch(1f, 0.03f), 0f);
+            }
+        }
+    }
+
+    // Only 1 spear
+    [HarmonyPatch(typeof(GaleLogicOne), "GetGaleObject")]
+    public static class Spear_Patch
+    {
+        static FieldInfo spearIndexField = typeof(GaleLogicOne)
+            .GetField("_my_javelin_index", BindingFlags.Instance | BindingFlags.NonPublic);
+        public static void Prefix(GALE_OBJ_REQ gale_obj_request)
+        {
+            if (gale_obj_request == GALE_OBJ_REQ.P1_JAVELIN_TOOL)
+                spearIndexField.SetValue(PT2.gale_script, 0);
         }
     }
 }
