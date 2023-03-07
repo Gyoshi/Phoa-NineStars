@@ -314,11 +314,19 @@ namespace NineStars
     [HarmonyPatch(typeof(GaleLogicOne), "_ThrowJavelin")]
     public static class SpearBomb_Patch
     {
-        static MethodInfo useStaminaMethod = AccessTools.Method(typeof(GaleLogicOne), "_UseUpStamina");
         public static void Prefix(bool super_charged_spear, GaleLogicOne __instance)
         {
             if (super_charged_spear)
                 Main.UseStamina(32.5f);
+        }
+    }
+    // Fast eating energy cost
+    [HarmonyPatch(typeof(GaleLogicOne), "_SpeedUpEatingProcess")]
+    public static class FastEating_Patch
+    {
+        public static bool Prefix()
+        {
+            return Main.UseStamina(5f, true);
         }
     }
 }
