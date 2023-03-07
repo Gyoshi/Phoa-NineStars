@@ -67,6 +67,22 @@ namespace NineStars
         }
         static MethodInfo goToStateMethod = AccessTools.Method(typeof(GaleLogicOne), "_GoToState");
         static Type galeStateEnum = AccessTools.Inner(typeof(GaleLogicOne), "GALE_STATE");
+
+        public static bool UseStamina(float amount, bool checkEnough = false)
+        {
+            if (!checkEnough)
+            {
+                useStaminaMethod.Invoke(PT2.gale_script, new object[] { amount, false });
+                return true;
+            }
+
+            bool enough = (bool)enoughStaminaMethod.Invoke(PT2.gale_script, new object[] { true });
+            if (enough)
+                UseStamina(amount);
+            return enough;
+        }
+        static MethodInfo enoughStaminaMethod = AccessTools.Method(typeof(GaleLogicOne), "_EnoughStamina");
+        static MethodInfo useStaminaMethod = AccessTools.Method(typeof(GaleLogicOne), "_UseUpStamina");
     }
 
     // Reverse the speedup in Gail-related methods
@@ -291,6 +307,18 @@ namespace NineStars
         {
             if (gale_obj_request == GALE_OBJ_REQ.P1_JAVELIN_TOOL)
                 spearIndexField.SetValue(PT2.gale_script, 0);
+        }
+    }
+
+    // Nerf Spear Bomb energy cost
+    [HarmonyPatch(typeof(GaleLogicOne), "_ThrowJavelin")]
+    public static class SpearBomb_Patch
+    {
+        static MethodInfo useStaminaMethod = AccessTools.Method(typeof(GaleLogicOne), "_UseUpStamina");
+        public static void Prefix(bool super_charged_spear, GaleLogicOne __instance)
+        {
+            if (super_charged_spear)
+                Main.UseStamina(32.5f);
         }
     }
 }
