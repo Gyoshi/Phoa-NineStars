@@ -23,6 +23,8 @@ namespace NineStars
         public static float speedUp = 1.34164f;
         public static float inverseSpeedUp = 1f / speedUp;
 
+        public static int inventoryBinding = 2;
+
         public static Harmony harmony;
         public static UnityModManager.ModEntry.ModLogger logger;
 
@@ -289,6 +291,7 @@ namespace NineStars
             if (fallingTime > 0.67f && !ukemi)
             {
                 int damage = (int)(fallingTime * 3f) - 1;
+                damage = (damage > 3) ? 3 : damage;
                 Main.IncurDamage(damage, true);
 
                 float volume = (damage > 1) ? 0.85f : 0.7f;
@@ -329,4 +332,18 @@ namespace NineStars
             return Main.UseStamina(5f, true);
         }
     }
+
+    //// Fewer inventory slots
+    //[HarmonyPatch(typeof(SaveFile), "_NS_CompactSaveDataAsString")]
+    //public static class Save_Patch
+    //{
+    //    public static void Postfix(ref string __result)
+    //    {
+    //        Main.logger.Log(" Original save : \n" + __result);
+    //        string[] array = __result.Split(new char[] { ',' });
+    //        array[12] = (int.Parse(array[13]) + Main.inventoryBinding).ToString();
+    //        __result = string.Join(",", array);
+    //        Main.logger.Log(" Modified save : \n" + __result);
+    //    }
+    //}
 }
