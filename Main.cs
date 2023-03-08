@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -25,12 +26,21 @@ namespace NineStars
 
         public static int inventoryBinding = 2;
 
+        public static string modLevelsPath;
+        public static string[] moddedLevels;
+
         public static Harmony harmony;
         public static UnityModManager.ModEntry.ModLogger logger;
 
         static void Load(UnityModManager.ModEntry modEntry)
         {
             logger = modEntry.Logger;
+            modLevelsPath = Path.Combine(modEntry.Path, "ModifiedLevels");
+
+            moddedLevels = Directory.GetFiles(modLevelsPath);
+            for (int i = 0; i < moddedLevels.Length; i++)
+                moddedLevels[i] = Path.GetFileNameWithoutExtension(moddedLevels[i]);
+            logger.Log("Modded Levels found:\n" + moddedLevels.Join(null, "\n"));
 
             modEntry.OnUpdate = OnUpdate;
 #if DEBUG
@@ -346,4 +356,30 @@ namespace NineStars
     //        Main.logger.Log(" Modified save : \n" + __result);
     //    }
     //}
+
+    // Modded levels
+    [HarmonyPatch(typeof(LevelBuildLogic), "_LoadLevel")]
+    public static class LevelMod_Patch
+    {
+        static FieldInfo levelPathPrefixField = AccessTools.Field(typeof(LevelBuildLogic), "_level_path_prefix");
+        public static void Prefix(ref LevelBuildLogic __instance, string new_level_name)
+        {
+            Main.logger.Log("Loading level...");
+            if (Main.moddedLevels.Contains(new_level_name))
+            {
+                Main.logger.Log("Found modded level");
+                levelPathPrefixField.SetValue(__instance, Main.modLevelsPath + "/");
+            }
+
+            string path = levelPathPrefixField.GetValue(__instance) + LevelBuildLogic.level_name + ".xml";
+            Main.logger.Log("Loading modded level : " + path);
+        }
+        public static void Postfix(ref LevelBuildLogic __instance)
+        {
+            string path = Application.dataPath + "/StreamingAssets/Levels/";
+            if (!Directory.Exists(path))
+                path = Application.dataPath + "/Resources/Data/StreamingAssets/levels/"; // mirroring LevelBuildLogic's Awake method
+            levelPathPrefixField.SetValue(__instance, path);
+        }
+    }
 }
