@@ -300,7 +300,7 @@ namespace NineStars
             bool ukemi = PT2.director.control.num_frames_since_last_SPRINT_PRESSED < (int)(7 * Main.speedUp);
             if (fallingTime > 0.67f && !ukemi)
             {
-                int damage = (int)(fallingTime * 3f) - 1;
+                int damage = (int)(fallingTime * 3.2f) - 1;
                 damage = (damage > 3) ? 3 : damage;
                 Main.IncurDamage(damage, true);
 
@@ -364,15 +364,12 @@ namespace NineStars
         static FieldInfo levelPathPrefixField = AccessTools.Field(typeof(LevelBuildLogic), "_level_path_prefix");
         public static void Prefix(ref LevelBuildLogic __instance, string new_level_name)
         {
-            Main.logger.Log("Loading level...");
             if (Main.moddedLevels.Contains(new_level_name))
             {
-                Main.logger.Log("Found modded level");
                 levelPathPrefixField.SetValue(__instance, Main.modLevelsPath + "/");
             }
 
             string path = levelPathPrefixField.GetValue(__instance) + LevelBuildLogic.level_name + ".xml";
-            Main.logger.Log("Loading modded level : " + path);
         }
         public static void Postfix(ref LevelBuildLogic __instance)
         {
