@@ -40,7 +40,6 @@ namespace NineStars
             moddedLevels = Directory.GetFiles(modLevelsPath);
             for (int i = 0; i < moddedLevels.Length; i++)
                 moddedLevels[i] = Path.GetFileNameWithoutExtension(moddedLevels[i]);
-            logger.Log("Modded Levels found:\n" + moddedLevels.Join(null, "\n"));
 
             modEntry.OnUpdate = OnUpdate;
 #if DEBUG
@@ -364,12 +363,11 @@ namespace NineStars
         static FieldInfo levelPathPrefixField = AccessTools.Field(typeof(LevelBuildLogic), "_level_path_prefix");
         public static void Prefix(ref LevelBuildLogic __instance, string new_level_name)
         {
-            if (Main.moddedLevels.Contains(new_level_name))
+            Main.logger.Log("Loading level : " + new_level_name);
+            if (Main.moddedLevels.Contains(new_level_name.ToLower()))
             {
                 levelPathPrefixField.SetValue(__instance, Main.modLevelsPath + "/");
             }
-
-            string path = levelPathPrefixField.GetValue(__instance) + LevelBuildLogic.level_name + ".xml";
         }
         public static void Postfix(ref LevelBuildLogic __instance)
         {
