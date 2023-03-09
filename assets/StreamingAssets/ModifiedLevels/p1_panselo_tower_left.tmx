@@ -1,76 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16" infinite="0" nextobjectid="90">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="95">
  <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
   <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
  </tileset>
- <layer name="back" width="48" height="48">
+ <layer id="1" name="back" width="48" height="48">
   <data encoding="base64" compression="zlib">
    eJzt100OgjAQBeAexoTogqTRuuZocxjw7xQczRlsI5KSjBvH0UfyBdLVA1460B5CaAHgb5xSnXUurTO7PJHgNbLOpc7Pz3pIoesZZx/5euQ1N/mvsc46l9baYZ1LaxfrrHNp3WKddS6tbQzEwpJ1Li3e68ca61xvPP8ass6lNZ9fvPdPZ0/zq+HMmyP3aD8huW4czS+ZvzJ7h8f8lTnsav5633+k/6X3Bfr/weef+1++PR32/2f2f8/9n5P+531J7dvyyz+wvJs+vc7lsp7nNQnL97U2v+Qbbnlv+b46PnfLdesead5Nzk/O81fXrbNqusU9l38D6bvbeQEAAAAAAAAh3AFxrcXR
   </data>
  </layer>
- <layer name="back" width="48" height="48">
+ <layer id="2" name="back" width="48" height="48">
   <data encoding="base64" compression="zlib">
    eJzt2EEKgzAQheEcpdCNq0Kj+17N47ho7tCjaQQxlCRKkc5M+D8IGSLCIxkXxjkAZz2G+tCullF7/qM91p4/ej9/e6ZF8G6Mc+f3ta0OPvOCUl2fr60gv4xa/1tidf837L+sFvKHYR2jyfz0v6gW8tP/clron++6dA4azyeXfyrkzK3fX+52eaiTlv/E9ZuNc1qX+shif6XI/1/xHiK9i1j6/yMWBgAAAABwiRna2yls
   </data>
  </layer>
- <layer name="back" width="48" height="48">
+ <layer id="3" name="back" width="48" height="48">
   <data encoding="base64" compression="zlib">
-   eJztleEOgiAQgHmdFurU+u+j8TrOrFfw0bpD2QiRkhUddd92Y3GNfeBxCMEwzD9R1kLhKGGEMHOaqhbdd6xe4wbO18W/PAsFoYE5zJGnamZ3ZDzpUFaONEfwk40e1Z4cJcaA30j8/JEn/l06k3gu9RxD/bgX6ue/1LiSG7Wew/mD4+TOme+Ro39vfQ/q9YOgvzlvdD+01nuQx/mrYQ5huy858qD/sdXhy3XJhXaC9WPqvW9WOfLY9xfqR+/B6j/kcfsP7sHch0z8lTtn7kMm/pP9+8f6P3nQf6v/R6yVnFD/j1grOT5/qCVlYudaySnAXYK7L3Bv7psWgtp7Pc73efUuB/7ffVQoAuxL7ru8FdT6Vai2fFG8oQcwDMMwDMMwDMPkwh1cNXwM
+   eJztlW0OgjAMhncdw8AM9T9H23UITq/A0WyBmmnGZ3B22idpFjayPCwvnVKCIPwThVEWRw0jFM11HI2qvmO1jDs43wb/4qIsVAfM4Rp7jmXvjrhzV9ZbY00GfrrsRrtmjRNuws8xP39kxr+KZ7Kdq+mrMa/fwv38h4xbPZL1FM4fHNuJtSqeyTZm/Nnj+9eQn8PJuw/SOH87scae1PvnL+WfoPsgVf8GMgWVir99n8ugB0Gl4t/6z7V3H6fiT3kP9H/2oD/l3XffuFd0MP+U9x32ik7IH7JkqVbuFZ0c3DW4hwq/rV7hxO2+dv3//LwPFrxffVxqJdiXKF/Up8aKW7+aylao8h16gCAIgiAIgiAIQio8AOUqcGk=
   </data>
  </layer>
- <layer name="back" width="48" height="48">
+ <layer id="4" name="back" width="48" height="48">
   <data encoding="base64" compression="zlib">
-   eJzt100OgjAQBeB3HBBcqOFnwcID6F49TY8DGpaeQg8gnsYhkIiLLqqJHe37kibDrF46NGkBIgrNfAGTDquviYIUFb4TuKlzoJF1zH0neU+7hIllz2c/tu//bCOz2HIeX3OpgGvlOwWRDjwPFJIQ/vcsw9qlr43kdOprcJrc4c6WnLa+BunKd4LP1QXM9PuQPOtmnM9OevsE6vRvs6h8zX8fc7by3ozLob5Jr1OYn4iIiIiIiOweCyIeXg==
+   eJzt10sOgjAUheG7HBAcqOExYOACdK6upssBE4auQhegrsZLIFEGHVQTW8L/JU0uZ3TSNDQVATA3y5WYtF/dDMxSVPhu4KbORRpd59x3k++0azGx7vliYvsOYOxaidwq3y0wdZwjv3Z6F++5j/9mDuc9y2TrkodGezrloblYetryEKQb3w1+VxdiPr9PyXtuhn/sQbNjIsHp3mZROe7/HHq2+t6My36+a/YIsD8AAAAAwO4F9mAdfA==
   </data>
  </layer>
- <layer name="front" width="48" height="48">
+ <layer id="5" name="front" width="48" height="48">
   <data encoding="base64" compression="zlib">
-   eJztzsEJg0AQhtHpxkBy2YCg3W0pHm1AMN1l2QbiBmRF3oP/OMwXAQAAAAC/Pd8Rrz9W7nKv5keqa/o/jhH7FMtUdk7VcWuqyy03W+n/lPb5Av1Dqsu9OwAAAODuvhv+ESs=
+   eJztzsEJg0AQhtHpJkJyWWFBu9tSPKYBQbtz2UOuJoIo4T34j8N8EQAAAACw79lHvA6s3pWrmrvU9vmfx/2bnCOWIaah7ryy77xTW/nlZq79a20fb9D/SG3l6g4AAAD4dxtlBhGZ
   </data>
  </layer>
- <objectgroup name="meta" visible="0">
-  <object id="1" name="config" type="id=0;follow=vertical;zoom_allowance=1" x="80" y="48" width="352" height="432"/>
-  <object id="2" name="config" type="id=1;follow=point;zoom_allowance=1" x="224" y="320" width="352" height="224"/>
-  <object id="3" name="trigger" type="GIS=cam_config_change,id$1,transition$smooth" x="336" y="352" width="16" height="176"/>
-  <object id="4" name="trigger" type="GIS=cam_config_change,id$0,transition$smooth" x="256" y="352" width="32" height="240"/>
-  <object id="5" name="trigger" type="GIS=cam_config_change,id$0,transition$smooth" x="96" y="304" width="304" height="32"/>
-  <object id="6" name="trigger" type="GIS=cam_config_change,id$1,transition$smooth" x="368" y="352" width="16" height="176"/>
-  <object id="8" name="level_art" type="ql=SI_TRUE,NIGHT" x="512" y="176" width="48" height="48">
+ <objectgroup id="6" name="meta" visible="0">
+  <object id="1" name="config" class="id=0;follow=vertical;zoom_allowance=1" x="80" y="48" width="352" height="432"/>
+  <object id="2" name="config" class="id=1;follow=point;zoom_allowance=1" x="224" y="320" width="352" height="224"/>
+  <object id="3" name="trigger" class="GIS=cam_config_change,id$1,transition$smooth" x="336" y="352" width="16" height="176"/>
+  <object id="4" name="trigger" class="GIS=cam_config_change,id$0,transition$smooth" x="256" y="352" width="32" height="240"/>
+  <object id="5" name="trigger" class="GIS=cam_config_change,id$0,transition$smooth" x="96" y="304" width="304" height="32"/>
+  <object id="6" name="trigger" class="GIS=cam_config_change,id$1,transition$smooth" x="368" y="352" width="16" height="176"/>
+  <object id="8" name="level_art" class="ql=SI_TRUE,NIGHT" x="512" y="176" width="48" height="48">
    <properties>
     <property name="bg_x" value="graphic=p1_panselo_bg_night_02;add_x=0;add_y=0.31;scroll_x=.008"/>
     <property name="bg_z" value="graphic=p1_panselo_bg_night_01;add_x=0.13;add_y=0.50;scroll_x=0.012"/>
    </properties>
   </object>
-  <object id="9" name="level_art" type="ql=SI_FALSE,NIGHT" x="448" y="176" width="48" height="48">
+  <object id="9" name="level_art" class="ql=SI_FALSE,NIGHT" x="448" y="176" width="48" height="48">
    <properties>
     <property name="bg_x" value="graphic=p1_panselo_bg_02;add_x=0;add_y=0.31;scroll_x=.008"/>
     <property name="bg_y" value="graphic=p1_panselo_bg_clouds;add_x=0;add_y=-0.05;scroll_x=.008;auto_scroll_x=0.012"/>
     <property name="bg_z" value="graphic=p1_panselo_bg_01;add_x=0.13;add_y=0.50;scroll_x=0.012"/>
    </properties>
   </object>
-  <object id="49" name="lighting" type="shader=diffuse;intensity=1.3;gales_light_power=5;ql=SI_FALSE,NIGHT" x="448" y="240" width="80" height="48"/>
-  <object id="50" name="lighting" type="shader=diffuse;intensity=1.3;gales_light_power=5;ql=SI_TRUE,NIGHT;color=a0a0ff" x="544" y="240" width="80" height="48"/>
+  <object id="49" name="lighting" class="shader=diffuse;intensity=1.3;gales_light_power=5;ql=SI_FALSE,NIGHT" x="448" y="240" width="80" height="48"/>
+  <object id="50" name="lighting" class="shader=diffuse;intensity=1.3;gales_light_power=5;ql=SI_TRUE,NIGHT;color=a0a0ff" x="544" y="240" width="80" height="48"/>
  </objectgroup>
- <objectgroup name="solid_collisions" visible="0">
+ <objectgroup id="7" name="solid_collisions">
   <object id="30" x="144" y="96" width="64" height="336"/>
   <object id="31" x="304" y="96" width="256" height="304"/>
-  <object id="32" x="276" y="224" width="32" height="16"/>
-  <object id="33" x="204" y="288" width="32" height="16"/>
   <object id="34" x="276" y="352" width="32" height="16"/>
   <object id="39" x="224" y="59" width="64" height="32"/>
   <object id="43" x="144" y="480" width="416" height="64"/>
   <object id="44" x="496" y="400" width="64" height="80"/>
   <object id="45" x="320" y="436">
-   <polyline points="0,0 44,44"/>
+   <polyline points="0,0 12.0047,12.0011 48.0018,12.016"/>
   </object>
   <object id="46" x="196" y="384">
    <polyline points="0,0 48,0 80,-32"/>
   </object>
   <object id="47" x="236" y="288">
-   <polyline points="0,0 32,32 80,32"/>
-  </object>
-  <object id="48" x="196" y="256">
-   <polyline points="0,0 48,0 80,-32"/>
+   <polyline points="36.0104,32.0417 80,32"/>
   </object>
   <object id="83" x="208" y="192" width="32" height="16"/>
   <object id="84" x="224" y="93">
@@ -82,79 +77,79 @@
   <object id="88" x="144" y="432">
    <polygon points="0,0 172,0 176,4 176,48 0,48"/>
   </object>
+  <object id="90" x="304" y="400" width="16" height="16"/>
+  <object id="93" x="243.988" y="256.008">
+   <polyline points="27.036,-14.0266 14.007,-14.0083 0.032269,-0.0122283 -3.98422,-0.00902194"/>
+  </object>
  </objectgroup>
- <objectgroup name="animated" visible="0">
-  <object id="57" name="AT" type="sprite=38;sort=fg_tiles,100;scale=vec3(0.5/0.5/1);color=dcceff;alpha=0.1;use_all_bright" x="176" y="96" width="160" height="128">
+ <objectgroup id="8" name="animated" visible="0">
+  <object id="57" name="AT" class="sprite=38;sort=fg_tiles,100;scale=vec3(0.5/0.5/1);color=dcceff;alpha=0.1;use_all_bright" x="176" y="96" width="160" height="128">
    <ellipse/>
   </object>
-  <object id="58" name="AT" type="sprite=38;sort=fg_tiles,100;scale=vec3(0.5/2/1);color=dcceff;alpha=0.1;use_all_bright" x="208" y="80" width="96" height="320">
+  <object id="58" name="AT" class="sprite=38;sort=fg_tiles,100;scale=vec3(0.5/2/1);color=dcceff;alpha=0.1;use_all_bright" x="208" y="80" width="96" height="320">
    <ellipse/>
   </object>
-  <object id="69" name="AT" type="sprite=0;sort=bg_tiles,-5;scale=adapt;color=fce6b0;alpha=0.1" x="240" y="256" width="32" height="96"/>
-  <object id="70" name="AT" type="sprite=0;sort=bg_tiles,-5;scale=adapt;color=fce6b0;alpha=0.1" x="208" y="144" width="96" height="32"/>
+  <object id="69" name="AT" class="sprite=0;sort=bg_tiles,-5;scale=adapt;color=fce6b0;alpha=0.1" x="240" y="256" width="32" height="96"/>
+  <object id="70" name="AT" class="sprite=0;sort=bg_tiles,-5;scale=adapt;color=fce6b0;alpha=0.1" x="208" y="144" width="96" height="32"/>
  </objectgroup>
- <objectgroup name="objects" visible="0">
-  <object id="10" name="end_door" type="id=0;facing=left" x="240" y="400" width="32" height="32"/>
-  <object id="11" name="door" type="profile=NONE_FRONT;open=P1_panselo_village_01;id=6" x="248" y="400" width="16" height="32"/>
-  <object id="12" name="end_door" type="id=6;facing=left" x="240" y="400" width="32" height="32"/>
-  <object id="13" name="L" type="type=P1_WOOD_L" x="288" y="400" width="32" height="32"/>
-  <object id="14" name="L" type="type=P1_WOOD_S" x="320" y="464" width="16" height="16"/>
-  <object id="15" name="L" type="type=P1_WOOD_S" x="384" y="464" width="16" height="16"/>
-  <object id="16" name="L" type="type=P1_WOOD_S" x="400" y="448" width="16" height="16"/>
-  <object id="17" name="L" type="type=P1_WOOD_S" x="400" y="464" width="16" height="16"/>
-  <object id="22" name="L" type="type=P1_CHEST_S;destroyed_GIS=SPAWN_pickup,P1_RAI,35|FILE_MARK_SI,PANSELO_MONEY_1,true;ql=SI_FALSE,PANSELO_MONEY_1" x="208" y="176" width="16" height="16"/>
-  <object id="23" name="L" type="type=P1_WOOD_S" x="416" y="464" width="16" height="16"/>
-  <object id="24" name="L" type="type=P1_WOOD_S" x="416" y="448" width="16" height="16"/>
-  <object id="25" name="L" type="type=P1_WOOD_S" x="432" y="464" width="16" height="16"/>
-  <object id="26" name="L" type="type=P1_WOOD_S" x="432" y="448" width="16" height="16"/>
-  <object id="27" name="L" type="type=P1_WOOD_S" x="448" y="464" width="16" height="16"/>
-  <object id="86" name="tutorial_trigger" type="exist_ql=SI_FALSE,BOSS_SLIME_DEFEATED;tut_msg=LEDGE_DROP_TUT;tut_location=tmx(14/19);appear_ql=ALWAYS_TRUE;exit_ql=ALWAYS_FALSE" x="184" y="240" width="48" height="8"/>
-  <object id="87" name="L" type="type=P1_WOOD_S;ql=SI_FALSE,REGEN_PANSELO_LOOT_1;destroyed_GIS=SPAWN_loot,64,loot_GIS_MARK_SI$REGEN_PANSELO_LOOT_1" x="448" y="448" width="16" height="16"/>
-  <object id="89" name="puzzle" type="type=p_lizard;instruction=tmx(23/25),tmx(30/27),tmx(29.875/25);sort=bg_tiles,6" x="368" y="400" width="128" height="48"/>
+ <objectgroup id="9" name="objects">
+  <object id="10" name="end_door" class="id=0;facing=left" x="240" y="400" width="32" height="32"/>
+  <object id="11" name="door" class="profile=NONE_FRONT;open=P1_panselo_village_01;id=6" x="248" y="400" width="16" height="32"/>
+  <object id="12" name="end_door" class="id=6;facing=left" x="240" y="400" width="32" height="32"/>
+  <object id="13" name="L" class="type=P1_WOOD_L" x="416" y="448" width="32" height="32"/>
+  <object id="14" name="L" class="type=P1_WOOD_S" x="320" y="464" width="16" height="16"/>
+  <object id="15" name="L" class="type=P1_WOOD_S" x="384" y="464" width="16" height="16"/>
+  <object id="16" name="L" class="type=P1_WOOD_S" x="400" y="448" width="16" height="16"/>
+  <object id="17" name="L" class="type=P1_WOOD_S" x="400" y="464" width="16" height="16"/>
+  <object id="22" name="L" class="type=P1_CHEST_S;destroyed_GIS=SPAWN_pickup,P1_RAI,35|FILE_MARK_SI,PANSELO_MONEY_1,true;ql=SI_FALSE,PANSELO_MONEY_1" x="208" y="176" width="16" height="16"/>
+  <object id="27" name="L" class="type=P1_WOOD_S" x="448" y="464" width="16" height="16"/>
+  <object id="86" name="tutorial_trigger" class="exist_ql=SI_FALSE,BOSS_SLIME_DEFEATED;tut_msg=LEDGE_DROP_TUT;tut_location=tmx(14/19);appear_ql=ALWAYS_TRUE;exit_ql=ALWAYS_FALSE" x="69.3333" y="276.667" width="48" height="8"/>
+  <object id="87" name="L" class="type=P1_WOOD_S;ql=SI_FALSE,REGEN_PANSELO_LOOT_1;destroyed_GIS=SPAWN_loot,64,loot_GIS_MARK_SI$REGEN_PANSELO_LOOT_1" x="448" y="448" width="16" height="16"/>
+  <object id="89" name="puzzle" class="type=p_lizard;instruction=tmx(23/25),tmx(30/27),tmx(29.875/25);sort=bg_tiles,6" x="368" y="400" width="128" height="48"/>
  </objectgroup>
- <objectgroup name="objects_day" visible="0">
+ <objectgroup id="10" name="objects_day" visible="0">
   <properties>
    <property name="ql" value="SI_FALSE,NIGHT"/>
   </properties>
-  <object id="77" name="bulb" type="intensity=1;color=ffbe4f;range=6;z=-2" x="336" y="400" width="48" height="48">
+  <object id="77" name="bulb" class="intensity=1;color=ffbe4f;range=6;z=-2" x="336" y="400" width="48" height="48">
    <ellipse/>
   </object>
-  <object id="78" name="bulb2" type="intensity=6;z=-8;range=10;color=dcceff;diameter=50" x="224" y="304" width="64" height="64">
+  <object id="78" name="bulb2" class="intensity=6;z=-8;range=10;color=dcceff;diameter=50" x="224" y="304" width="64" height="64">
    <ellipse/>
   </object>
-  <object id="79" name="bulb" type="intensity=3;color=dcceff;range=4.5;z=-2" x="224" y="384" width="64" height="80">
+  <object id="79" name="bulb" class="intensity=3;color=dcceff;range=4.5;z=-2" x="224" y="384" width="64" height="80">
    <ellipse/>
   </object>
-  <object id="80" name="bulb" type="intensity=1;color=ffbe4f;range=6;z=-2" x="432" y="400" width="48" height="48">
+  <object id="80" name="bulb" class="intensity=1;color=ffbe4f;range=6;z=-2" x="432" y="400" width="48" height="48">
    <ellipse/>
   </object>
-  <object id="81" name="bulb2" type="intensity=8;z=-8;range=10;color=dcceff;diameter=50" x="224" y="240" width="64" height="64">
+  <object id="81" name="bulb2" class="intensity=8;z=-8;range=10;color=dcceff;diameter=50" x="224" y="240" width="64" height="64">
    <ellipse/>
   </object>
-  <object id="82" name="bulb2" type="intensity=8;z=-7.5;range=10;color=ffedc1;diameter=80" x="208" y="112" width="96" height="96">
+  <object id="82" name="bulb2" class="intensity=8;z=-7.5;range=10;color=ffedc1;diameter=80" x="208" y="112" width="96" height="96">
    <ellipse/>
   </object>
  </objectgroup>
- <objectgroup name="objects_night" visible="0">
+ <objectgroup id="11" name="objects_night" visible="0">
   <properties>
    <property name="ql" value="SI_TRUE,NIGHT"/>
   </properties>
-  <object id="71" name="bulb" type="intensity=1;color=ffbe4f;range=8;z=-2" x="336" y="400" width="48" height="48">
+  <object id="71" name="bulb" class="intensity=1;color=ffbe4f;range=8;z=-2" x="336" y="400" width="48" height="48">
    <ellipse/>
   </object>
-  <object id="72" name="bulb2" type="intensity=6;z=-8;range=10;color=dcceff;diameter=50" x="224" y="304" width="64" height="64">
+  <object id="72" name="bulb2" class="intensity=6;z=-8;range=10;color=dcceff;diameter=50" x="224" y="304" width="64" height="64">
    <ellipse/>
   </object>
-  <object id="73" name="bulb" type="intensity=3;color=dcceff;range=5;z=-2" x="224" y="384" width="64" height="80">
+  <object id="73" name="bulb" class="intensity=3;color=dcceff;range=5;z=-2" x="224" y="384" width="64" height="80">
    <ellipse/>
   </object>
-  <object id="74" name="bulb" type="intensity=1;color=ffbe4f;range=8;z=-2" x="432" y="400" width="48" height="48">
+  <object id="74" name="bulb" class="intensity=1;color=ffbe4f;range=8;z=-2" x="432" y="400" width="48" height="48">
    <ellipse/>
   </object>
-  <object id="75" name="bulb2" type="intensity=8;z=-8;range=10;color=dcceff;diameter=50" x="224" y="240" width="64" height="64">
+  <object id="75" name="bulb2" class="intensity=8;z=-8;range=10;color=dcceff;diameter=50" x="224" y="240" width="64" height="64">
    <ellipse/>
   </object>
-  <object id="76" name="bulb2" type="intensity=8;z=-7.5;range=10;color=ffedc1;diameter=80" x="208" y="112" width="96" height="96">
+  <object id="76" name="bulb2" class="intensity=8;z=-7.5;range=10;color=ffedc1;diameter=80" x="208" y="112" width="96" height="96">
    <ellipse/>
   </object>
  </objectgroup>

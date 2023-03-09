@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="71">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
+  <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
+ </tileset>
+ <layer id="1" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztmIttgzAQhm8K8lBV0XaHqCSVwiiMwhR9RK1K2kUYJaP0XOzIHOYwPpMoUSz94nGN8YfvRQHij+X6cjTFODfTjf/G76tFBvk8gxRVWef5Qovaro1fDWRLUQd67rJdGz8ylbivpc2I1//3XbZY/AnOayRlmAnmMD6Nx4Phpf5u26T8aq3VCqoU9b2Bar+CGq/rWfO83rjjbGpOVOj+d+YmvmDb6hj8yFw9aH481qnm5+KOs0n5xzw3Bj9yA5Xe/96442wSfpyroHOTWDjYthj8uN+A+w56/wv0h0LzH336K+uPSWoT7r8d56046Lsn5cd4h73mx3dRVJqfizuX7U5pDZWE3/Zrl6/H9n8jO/+jgPL7xiS+g0K4/0e/pnHQdy82v15/zsUdZ5Pu/9i/n5C/U+OMj09V/6YYY9dg+Pt8Xvn4VPXPHkN9v45TExOwzOLyMzWuU6Mo/+cGUin/UN//imt4Q72jPlC7+PzB9U/HEdDjyP1n+/5ErRU1V3nT8fukea7Y/33rn7HNslYtsfPKWH6vvj/EzyzW3vwXUv+M/8fg9+37hfwl5cfYraT1LzY/1/eo37l6eB/ptTr7H8n3XyT/Z/v+GN/rHD/p61ifp/k/Bv/QsPl3z5CGaGD/FXfDv+7kPLb+Tcn/tIXycdv+f82s6btDxPEH1z+bdYyP+oxfZP8h/CHSnC7+ofqXMrb6VP2v7VcJke2DQ+/Ah1+d379Arq8LLhfE6v9Owe+q/4af+Hsr3qf8/jslP6kDLX4ypzOn9eS5i+Mn72EUb2iul/L7jrFrMO9AkFcvmv+c+gOAmDfb
+  </data>
+ </layer>
+ <layer id="2" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztVtFthDAMzSIn9bJDFalfjMIoN0Y/k0zi0WofMedLw9FKBZPiJ0UJISA/v2eDcwbDsXH5cAMO0I5DC8idxk07Di2Y/qa/6W/6a8ehBdPf9Df9z6V/Dm7k9Rn1r/ifTn8C5+Dz3Q04QDeafYHcI6+RO42bXjTbI4WHvrgePfLnHKzVfw79eyMJvQnIacZa/f8H/lTrkvNv+n/xCmwY3uZADm+58gCD9W/1AcpZyd24Q5iLSGGeqXbhGu6c5P24xI/B+ksupCvrL+uA9qtzrfeN33e3BfFE7jGFJz6UCyg5mH3OOVryLuvNvI/+H1Q4Rz/xB3mPtUhlzlM+2L9Qv4tQ8271wZbuGiBeV8Fb1EPkNeZlyGKf5izqIotnW77na+n9nvqeqAfgay9q1Ff1uqZ/8drTM72A+j36BfzUD6B1Zkl/eaZ4Ie4Q8p8iT3Vx75UlB7FwAT7z0/rv1QM1ah+80p+9zx5SCHc3iDwc+vtn6A9frrS6Og==
+  </data>
+ </layer>
+ <layer id="3" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztmAsKgkAQhucUEkEZ2hXCF6hH21NEkGboRTpKR2nSpFHUoNbd1PlgQVwW/n/n4a4ADMMwDMNMASsCoVuDDPII4i/XCblK9GAR/wXxtPN1qFGH5QHYXv/8tcP/xofbaIIUk6P3gvjfe+/YmwHGP2jmA8MskcQHccZeQEcy897IMF3Y5HtgL+jbQHsA135F3/l/5S4jLz6d/1eOIiESadf0XGpc1l01JX0gbfWBeq8Mtzo3Yx38DfkPfft0KEe5JneG7z+Y8+JIfE+hF8i64xgT8PqJoTrZvPKd5gMF4y7WAdxHkqYEWidm2F3v6D3Wo04tGfrfhiAw7jH974H7IvSpGpfaG/qGCz6bUXP++T6bsX+G0cEDMdtE6Q==
+  </data>
+ </layer>
+ <layer id="4" name="front" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzNmFuO4zYQRSvIYw3J5MfIFib5mR6gsxQthQiSbIHkIAl6KVkKlzKUzFO8YrsHBiUDQ6BgWbZYvPW8JbO5FT9YSE3W63yVpUqp96z9Vtrv3Fuf255tz1h7Zmn3tu/rc7F/bnvk9kzbg2eWds2eS3ue/4Wmt7AvvzXdZRI++MDIWa1hKOyful7Oof8vYG+fJXacIff/F8Fm2KPtY7nbJAx7gRv7WBq+z67Y8S5iX3RgX2LCBKc/0+yHD9U2QexADCxtL57xuIoSZ7nHkLVnQu5nxHbYPxzAzzmXpqfgN3ASH00fZyoSHxa7r9gTIaeIYTCQCyb+Lqqv2b/EHoMeC6Jz0zGLX86wkNMap7H7SW0OBs7D2QycuduiiA/R4b5udlBsBX3EfxKskpeaT9NL6o7XGXA0X2ieYnu1mcdy2tuhxG4vfM01uDT2dzmn++ReR1Sn+ywf8z85i2/Uxp7nnB/58cnsXZfQZPz+1r03pe6Lzdwm6vO4twX1axo/dUdsrHUF+2hP3HxWz3qZ1fmlVfd9oeZL3hk1X2LN8+Fg/fe+myTfJA491iQW1nMup4GWVfclx7T3BT3TYJNwpP5JryMHvKZL/pv6ZJUH4n9J+7in1hS573yD77P6NP+Fc5Xc9XuPyd1WywPj33uo1GPthYj2pTKrb+jLr/I99x7jfCU/Fv9L3PscXrKLzSR5e8T/1FPhO+5/OAi8js9U63le6/RV7JZ8ejqE3/tq3vfioHEau3/CLH76XNzPKrp3EY6LLTw2lf9JTww/Pc2dCf8r15Tcpz47f6RvzeIXzlG0n8QPO86itcakP3J/O8MZOSH13wQ7XMqvJRaO1v+Se46N+YD9iQfygNzwuMhX/MsZ+Ica5zU+9jhVLrDl6Owa+j59hRmH3HPunvax6PfO5ES5Yw3UYOEDFru/ylH8YEyCQ3iF1n7intxQbn4a/tX/0meCxOOiZ5V+tMXCrD7ldDqXpJ6D7n+JAY87Od8p+GvdLOO80GYCaoD3Je3Ts/qS8GzhHNpzF/GD80XplW6rB3NCx6u9iDMf2Huc327NZa9muNUnkgfhSA7eccaX1HPfxA/4KjxO++3V4nSzQ5XLWfX/1oIT5V4TmAF8JnmE3ntWtYP9/GS/V7msn4/Qgf+Z+aQfe+9+hN6vZbWeYFJvlJ8d4v9f2/r0xkxRZw7qrHITakKZ1ffW/PIlmZ1t7lmXj3b55aP9Dx/J+3pHn3Kuxuesvrh/v8Kc7z2eGQCeoLPfaof/ni38+3xu/U3ynnHgGMwbu99PmP+D2BWs8D2fu5jJxxl4tcM/z+dgX2tdFp6RBv+LHeBkm49m9QmfN8EI78MmXm/y3j6v7HDv+uY3s2/fm/3x/vqJDFxndwaZvdwW9INZ/Fk4lM6XcAt5B1NytxG91+fTe96JqPxZsf5V5e+rhHod6r1ArcPW0vc5i8aBz+Kz+MWvJe1jHm7nc6a8j/E8kTkEbuo1eZiXwlrXqF3f/Wr2fZUfrhLqdaj3fM4eZjAwF4mJJXWZxi8zHnXG5x+xg8+Fw0zucZH6eyBwq8/oW8yrK/5wS2QOY/bFfj6PSC74XPgZc+w2Pw==
+  </data>
+ </layer>
+ <layer id="5" name="front" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztmE1uwjAQhWfX9gYV2YQFRwiLUIUcxUfxLVpgYwK5R47io/RZ2JIJQgpiIhsxnxTZWGDPm/jnGSJBEARBEARBEFKwalJHkJb+zfWvtqkjSMcZ2vs31v8s5Q+VqWN4lMOaFFdfyxfRv1iT9qXF03L1i/ev4s84SzRX31w4vcVIM9rKOcbq89RvoV+FeY9y2ONBu+EeC2eJ5u6TCz8PXC6c9gFr13CPgfPEcvfJiZsLoY61a+9/UxCEqZya1/ABnOCsVzjvFPZ8c27IuBJeuk0dlyPs8XOPE/s/zIE2x7tEnAfUWRn7v1yZ4nk6eDfj/VsX+bjO/z/wWRF9VZf6R3X7++CxcyReD/fWRgnvZvz8PTZX7VRsbr0C2vQcsc5JfPdzd4BDtB5M5F2X26t2+q3hHZEDpzmU3xsakEsd3nuR8fsPTL37HUf72F9NFnpbpzmUu5o08qf3lxzYR+L4BzSZWXg=
+  </data>
+ </layer>
+ <objectgroup id="6" name="meta" visible="0">
+  <object id="1" name="lighting" class="shader=diffuse;intensity=1.4;gales_light_power=7" x="192" y="128" width="112" height="64"/>
+  <object id="2" name="config" class="id=0;zoom_allowance=1" x="384" y="80" width="544" height="416"/>
+  <object id="3" name="level_art" x="192" y="208" width="112" height="64">
+   <properties>
+    <property name="bg_y" value="graphic=anuri_temple_02;add_x=.06;add_y=0.42;scroll_x=.020"/>
+    <property name="bg_z" value="graphic=anuri_temple_01;add_x=-1.11;add_y=0.42;scroll_x=.022"/>
+   </properties>
+  </object>
+  <object id="4" name="particle_emitter" class="type=FOREST_POLLEN;name=pollen;ppts=0.07" x="720" y="432" width="64" height="32"/>
+ </objectgroup>
+ <objectgroup id="7" name="solid_collisions" visible="0">
+  <object id="14" x="224" y="464" width="480" height="48"/>
+  <object id="15" x="224" y="112" width="240" height="224"/>
+  <object id="16" x="800" y="384" width="160" height="128"/>
+  <object id="17" x="224" y="48" width="736" height="64"/>
+  <object id="18" x="880" y="112" width="80" height="272"/>
+  <object id="19" x="696" y="352">
+   <polyline points="-16,0 32,0"/>
+  </object>
+  <object id="20" x="640" y="288">
+   <polyline points="0,0 64,0"/>
+  </object>
+  <object id="21" x="648" y="224">
+   <polyline points="-24,0 72,0"/>
+  </object>
+  <object id="22" x="800" y="112" width="80" height="192"/>
+  <object id="23" x="632" y="416">
+   <polyline points="-16,0 32,0"/>
+  </object>
+  <object id="24" x="464" y="192" width="128" height="32"/>
+  <object id="25" x="448" y="224" width="32" height="128"/>
+  <object id="26" x="224" y="448" width="320" height="16"/>
+  <object id="27" x="224" y="432" width="288" height="16"/>
+  <object id="28" x="224" y="416" width="280" height="16"/>
+  <object id="29" x="224" y="400" width="224" height="16"/>
+  <object id="30" class="profile=GRASS" x="704" y="464" width="96" height="48"/>
+  <object id="31" x="512" y="224">
+   <polygon points="0,0 0,128 -16,144 -32,144 -32,0"/>
+  </object>
+  <object id="32" x="512" y="224">
+   <polygon points="0,0 32,0 32,128 16,144 0,128"/>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="objects" visible="0">
+  <object id="5" name="end_door" class="id=10;facing=right;start_zoom_lvl=1" x="400" y="368" width="32" height="32"/>
+  <object id="6" name="door" class="profile=TOUCH_TRIGGER;open=P1_anuri_temple_04;id=10" x="320" y="240" width="48" height="160"/>
+  <object id="7" name="puzzle" class="type=p_weightswitch;profile=0;puzzle_id=1" x="656" y="448" width="16" height="16"/>
+  <object id="8" name="end_door" class="id=0;facing=right;start_zoom_lvl=1" x="400" y="368" width="32" height="32"/>
+  <object id="9" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=1;instruction=52,26,48,26;spd=2" x="800" y="416" width="80" height="16"/>
+  <object id="10" name="puzzle" class="type=p_weightswitch;profile=0;puzzle_id=2" x="816" y="368" width="16" height="16"/>
+  <object id="11" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=2;instruction=31,20,35,20;spd=1" x="464" y="320" width="80" height="16"/>
+  <object id="12" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=2;instruction=52,16,48,16;spd=1" x="800" y="256" width="80" height="16"/>
+  <object id="13" name="loot" class="id=98;ql=SI_FALSE,ANURI_KEY_7_COLLECTED;collected_GIS=FILE_MARK_SI,ANURI_KEY_7_COLLECTED,true|light_change,pearlstone_light,intensity$0;name=FOCUS_PT" x="496" y="176" width="16" height="16"/>
+  <object id="34" name="trigger" class="GIS=cutscene,line$FOCUS_SCRIPT_ZM1;ql=SI_FALSE,ANURI_KEY_7_COLLECTED;remove" x="560" y="320" width="32" height="144"/>
+  <object id="35" name="bulb" class="intensity=1;color=fcff00;follow_target=FOCUS_PT" x="48" y="80" width="80" height="64">
+   <ellipse/>
+  </object>
+  <object id="36" name="bulb" class="range=2;z=-0.5;intensity=1;color=fcff00" x="640" y="432" width="48" height="64">
+   <ellipse/>
+  </object>
+  <object id="37" name="bulb" class="range=2;z=-0.5;intensity=1;color=fcff00" x="816" y="352" width="48" height="64">
+   <ellipse/>
+  </object>
+  <object id="41" name="bulb" class="intensity=4;color=ffedc1;range=2;z=-1.5" x="800" y="336" width="80" height="64">
+   <ellipse/>
+  </object>
+  <object id="48" name="bulb2" class="intensity=6;z=-8;range=10;color=ffa359;diameter=80" x="336" y="320" width="96" height="96">
+   <ellipse/>
+  </object>
+  <object id="50" name="bulb" class="name=pearlstone_light;intensity=2;color=ffedc1;range=3;z=-1.5;ql=SI_FALSE,ANURI_KEY_7_COLLECTED;follow_target=FOCUS_PT" x="472" y="152" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="53" name="bulb" class="intensity=3;color=ffedc1;range=4;z=-2" x="768" y="384" width="64" height="80">
+   <ellipse/>
+  </object>
+  <object id="59" name="bulb" class="intensity=3;color=ffedc1;range=3;z=-1.5" x="640" y="272" width="64" height="48">
+   <ellipse/>
+  </object>
+  <object id="61" name="bulb" class="intensity=3;color=ffedc1;range=3;z=-1.5" x="640" y="208" width="64" height="48">
+   <ellipse/>
+  </object>
+  <object id="62" name="bulb" class="intensity=3;color=ffedc1;range=3;z=-1.5" x="672" y="336" width="64" height="48">
+   <ellipse/>
+  </object>
+  <object id="63" name="bulb" class="intensity=3;color=ffedc1;range=3;z=-1.5" x="608" y="400" width="64" height="48">
+   <ellipse/>
+  </object>
+  <object id="65" name="bulb" class="intensity=3;color=ffedc1;range=4;z=-2" x="512" y="288" width="64" height="80">
+   <ellipse/>
+  </object>
+  <object id="66" name="bulb" class="intensity=3;color=ffedc1;range=4;z=-2" x="768" y="224" width="64" height="80">
+   <ellipse/>
+  </object>
+  <object id="69" name="tutorial_trigger" class="name=sprint_tut;exist_ql=SI_FALSE,ANURI_KEY_7_COLLECTED;tut_msg=SPRINT2_TUT;tut_location=tmx(45.5/28.5);appear_ql=ALWAYS_TRUE;exit_ql=ALWAYS_FALSE" x="833" y="256" width="14" height="128"/>
+ </objectgroup>
+ <objectgroup id="9" name="animated" visible="0">
+  <object id="68" name="AT" class="sprite=38;sort=bg_tiles,100;scale=vec3(1.5/2.5/1);color=FFC100;alpha=0.2;use_all_bright" x="560" y="112" width="224" height="352">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>

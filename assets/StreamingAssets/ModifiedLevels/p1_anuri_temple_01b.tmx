@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="90">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
+  <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
+ </tileset>
+ <layer id="1" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzlmG1ugzAMhn0KKlXVRC/Rlv7iKDkKp9ikakzpTsJROMqchmxZRILzQSjU0isSakKexDaUogIoNqL9VcrHlp7zq/JH3LsR2q2YX9jbGRp9Hqr/CvztGeALeduBWe9vnf/7Mq2t8guzxb3Zt42xl1olvyvuzb5tjJvUKvm1GG+oMsd4R3YUfATwow//rKDEY5+T/36CjqOOJ2DYZuUJANuwk7ksjlYfPMdD8mzMkL0emLPyI0dXSjEuJXj/8dt87gn5BTeuAcvJ7xPr1BwI5besySJqjXZb/cWD6Tf41lvi91mnVPyFjP8s/KHxnCIPXPzDGrDDFdhc/Kp26zUc21zVeNe1pq/5PEjBrzQXv6rdeg0/Sj1qvOta09d8HsTwW9Yka+zHxD81B5bgF6bVqodUX1mb6F4x/HPVPxe/rpAxfefpsoPxfvzM/Hr8JNz/39qfkt81/2faf/ydC+Xkj4m3kJrxLPw27arxd91UWoLfh0f4juXG2DeN1Pzi/z/mfzkDv1BJlJWfOkYoP7LXRjwk479doKfIxU8dI2L/Z+NX35+m5OKnjhGT/yPPP/FdrMfzal0bgkD3deU/7hfXNbH/nKIY/mKB+o9sTJMr/xlFrhzwsUz8na6J+t9RtDL+rPKxH48WHig=
+  </data>
+ </layer>
+ <layer id="2" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztl9GNgzAMhpmiTxywRcVdRRmFUZiifalKRmGUjnK/CS5OyrWgAzVU/qQo4ATLv50EiCJFURRFUZbg67trdeg+1wJxlmht6D7XQuuv9df6L1OrGL6W9vlOzH5eDS/5Xf9m6q8MoN7KP5i7X0Kmmahl6ryQ2OW2j8UZfcmHMWoYM9kEbbLm7Dd0OE5obtkGvQ7xhPeXPC/g08BftoUc9PW9oc/Yxu9uOWfOecjvPqm/Cfw8lWuX4yf83DyD9z/pho9qC/Un/Nr2a6Li/T9Fh9TOfbp/HA8VPz65Hig/r95n/vmI++DXvETGT3XL3NqN4uckLZyxzid//9M19oRZMOTFIK2Iveb7xtb7biOdr9Yv+UiKqEz6ZygXqdUf7Pc/60PMUVO4MZINre3nOfy1F5wc2ufrsedDQOq72usKzYzNlVok8tz0c4j723XIbzn2/Lshzc/Gee/ufqKacnQ6dK2mMbJRz7b0aG3yfz85RNkn/P+TLmgxvk3eN8dH2ydwhqYTGvrZNmU9fgHxYYeO
+  </data>
+ </layer>
+ <layer id="3" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlksOgjAQQHsMN0aDGz2BCRjq0XoMN0ZSNngLjuaAaaCFBqQfmDgvaeIAQzq+TgtjBEEQRAwkZ/XacyCImOzTdoixe7tb5MmsgFn/Oe/uPXr1w3Vhy8EM1HGHUau4gvrfuf4MxKLS69dyMDPwzxm7cP0ZiAVcF7YczPRdnvjEwyM52DDdLXGJ2b9yB986RQJjiUszB9N6COEf03pQrlSvu/pv3kP+8fm3xVMkhm+IxT/5l7zLaf4L+a0fhf/XdejKpf+lwx6yFtT/dv+wlxeu79g6of2XM7+hY1NaevVXdyWS8z6xeOi7OnE//p/wG0bLMV00XWfMdSft9Xvb/8fiYqX65xKy/w8Z+M+8TTUIGHp362A+/32A+fzHxAdw8IQZ
+  </data>
+ </layer>
+ <layer id="4" name="front" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzVWMuR2zAM5SFJDZvNJTXEOdnNsBTObH4diMzksKVsKSwlJI0HPmosOwKdgzGjsawPCPA9/OTcZVmOzsejy/U3yW88n/tyHsqvK/8DXavv8HM5np/J8lz9rc/h/ZzkHdxfxveaXrkXsKas0+5jfbkWUtefY9cTNly8KlVnOq+LtWBrsz/26z719XPsexDkfk79/facHBl6xG7dD1nbyX40O+D7Cgs+x7ttvdT1eqP/GfsexbelY4Q91vNl5IpLoz/ALzydnHvuR5BDz8v9AWfRCWwDreexHu2RF1txve2/xX/BxRF+8MsLJxADLnZ7wOsQR7sU9+Lj52vrlvuvS8c6QEccMVUuEs/ApUzX2rMWER5liQEPzqZ+7uk/+O0J6ww7GfOPp+t8LPczc2EZcXfkO+xBHLEtioUV/zT64ygGPHAHNmIPsEEuC4j3W5hvCXFB89BCGFN+AD/BPXDSTcQ/8i/OcyI/U4+zEEdM2t7swXxL1lygfIT6pHUo9Zyp5xIzweh/IL5hnzm3Zbrv4hgnZsy3hPMC+Ea1xPHec06w+h/HGPOx8w81boiReu8emG/JBS5ofqFchdoHXjYuTPjvsQeog1TPFH/koHtjviXgAtfE2PNSJsxa3FrWID6v+eYj1ab/ifmWXKoRhA3nyan6R3zXegheoA+ZwbziWHXP6kAsoheKlKMm+19PPOJeVdew2P679niFL+ujXN8t4j/qMvokxswkVF8150N36vh7i/9iM9exbOUSOISan6hnn4l/9BLpOMQCeirN+c+GmP9zUow0T1X7y/Xdtpb1YQ9qP/cCbqL+Baoh2gvEjpubwYx6Fc0xk7ow73qafZvuvTqrxL6HOsfCXuqzTTWv4s+9O9Yx4v8ae0+iMyf3aBZZ9Zg896C3bPE2gRn3z02vJZagi22NfTZ2E/5rr8+9BcVX2+uJ+Ne+CXE1gT/icpi7YLdFkFN5P7knRixM4p8Xqq9GXdrvIY6obrW8ahHqrzVP8Twwm/9pftA5xor/0rEH7xGr3jr/A5N0HGaNwHFl7X9W+V/nlwn81SbUJ+pTTRI7p3LsORr9hebtifyP3BJQvyfiX+1cKE+hLuzVWYXqKfIU9/3gh4n/NL/wN9BQroe9uuA/5vLYeY+eaLd9opftG+xc2WzSfy+R/g9xhDkI34XM9e9RhPivsU9x66z8fxRB/lt9q3Gogdb89ygC/1EDaT4Ny0T+uzSf3zp+HJz7Vo7vh/N5OUI5D+VaeDnY5rBbIvGv3yWWXrcdemuL3lW911/MqjRj6jz84asL78vx7nw4/v/rcD+fP1GdeDq5N+oltE9LVFctwt8RUP9Q94Vn2APtX+ta1/bg55f5WlF8r9+Z3/CfOQ/8eaawfv9A7aDvHsiryLM6C/OszD09bENOKnbXfuFt5hC8UeeHuY976n+d//8CqD1pag==
+  </data>
+ </layer>
+ <layer id="5" name="front" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzNWW1y2yAQ5Rhp+8fuKTJxJ9OjcBRuAWTaiXuTHoWjFGTe8kQVyazlujvDSJEM7LLv7YdizLL4F2PDi0nlGus1XO5tvnf5avLfjp6VOfy7FC6/SfV35Vp+h/kp1jl47+fzpnXrO4c96z7Te+xfn7nY1k+hreM+MHFVyprxsi/2gq6T/qE9t7Htn0I7A1ffp9jmT7+rI2GdqrecR93b1POY9IDtnS/4HnOn/WJb12rs//V8n3GeD7c09t5TI9UvhvwHv9iKCXDAwOeEaxeaHwTzZXw+mcPavvn92TespLpeCnOfCharHsCjiY1PFtzQCO3tSP8U272lv4FvsTMSjgPhfsR+2EbcNmQ79EkLuogvih809t8J9+79eT0evdNvH4l/3+Iv7oFDU3HtcA1zn+C9DRTntvzeC+HAAteRYqZv2Mc7xEw8Qw5ZPe8V+x3hDdwDpqEL5yPmCXQRvmjtB77BA8I/5xLhB3IexwaN/f8a973syQONBIqvlKvlnvK0xPg9cN/LCg8ScwIYDVQDoEZQ2g8893iDHlyTIMYP4f7nybgfeeTrpv09D7rcAF0S6jXO1Rp5FO572YMHGuniuMT5hTizyI81v79ln8fs8368XYEDqjXkHrrE1o8Ar1Ne0EhonJKYj7Ujcb2ria7C/eGbOXR5bOJsfn7esp/qHeYEcnNiftzC/3vi/pjtJ30t+qvjiv238EAjhCfEGcnzFOukDx6J99nP3DNaxNf8PG3NXcgHiH3ck0oP7fXx39C6wKgj3HOeG65zqHYX/a+Zt8AD6c3B9y43quSe8f5wwT/XzxO+1vgP0fBAI8AQxX/0wlJzMxdG6pzKf/jQgVdr/O+l4gBxDnrKer7FP5V0/TRwlpjrzIUR+yv/0SNLfr2G/5C8H3MHOUlqNFpbJfje4SlOUc8963PCoP+LUK0ofczI/OJ/5H1P3w998wlq1TSyLgQ+iW1tPttZ/C9nnfWx165d+Y9zlVr+Gv5Div+73mOWn9C/3IB/rJ/CHGfD9V4vx0v9A8461Ouj/EfdRDUfYkmC37T+R05GDKB9UP/Oar9B/5d4UeaYep3GIP/P0AO6UHySb39e+f2302+m59L4NGD/HlLxz7U/6nSuy4w2///vUvEP3CM/Sy6MDb/p0breQ6r/HcV5rkcN9UUPk8OrMV9fc12TR753e64N+6nXdaHVvfhOoo5/S/351viy0r/vLcV+7tEjxTvKy1OO0qzf5Xu5oleN9K0rfND75POweaQdzP1Lnk7mt2//50AtIXVapLyqke47W/JtAGc4A6lfy15PF5sn24uOeXzHsz2F+ubU+597Cu33D+SOQGcc53FW6n/ulVF3F9uhm7YH39CPa9xZ/vMtL272/38A+yjMJQ==
+  </data>
+ </layer>
+ <layer id="6" name="front" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztl00KwjAQhUdciFfQTaJHkO6k8Sgepddwl/QkPYpHccYQ0EJVYiA/vA+G0EDCvKQT3hABAAAoiaPJnQEAAIDUrE9Eq46G3HkAUBNjnzuDNKgzqYV5+2md69t4M/SCfv1Fv23EE/M9Xxfm77+sHxv5D2Jxlb8DsfUf0JXXQWz9B1zl+v+tfwAAAGXAvfyzp992vq+Xb/FoGx41e5VD5X4lBvFotvfjzZDd+VCpR95b5db6SuhRxaMp43s2zpP2hi4cU+rgvYesgmeEHlU8mvRrfA6iX7TLGQypg/ee8ip+R8/uw5my7/8Bu5d5qQ==
+  </data>
+ </layer>
+ <objectgroup id="7" name="meta" visible="0">
+  <object id="1" name="config" class="id=0;zoom_allowance=1" x="192" y="16" width="608" height="476"/>
+  <object id="2" name="GIS_PACK" x="64" y="160" width="128" height="64">
+   <properties>
+    <property name="1-switch" value="puzzle,msg$ACTIVATE,id$1|puzzle,msg$ACTIVATE,id$4"/>
+    <property name="2-switch" value="puzzle,msg$ACTIVATE,id$1|puzzle,msg$ACTIVATE,id$5"/>
+    <property name="3-switch" value="puzzle,msg$ACTIVATE,id$3|puzzle,msg$ACTIVATE,id$4"/>
+    <property name="4-switch" value="puzzle,msg$ACTIVATE,id$2|puzzle,msg$ACTIVATE,id$3"/>
+    <property name="5-switch" value="puzzle,msg$ACTIVATE,id$2|puzzle,msg$ACTIVATE,id$4|puzzle,msg$ACTIVATE,id$5"/>
+   </properties>
+  </object>
+  <object id="3" name="level_art" x="64" y="240" width="128" height="64">
+   <properties>
+    <property name="bg_v" value="graphic=distant_panselo_02;add_x=0.03;scroll_x=.01;add_y=0.53;scroll_y=0.04"/>
+    <property name="bg_w" value="graphic=p1_panselo_bg_clouds;add_x=0.5;add_y=0.49;scroll_x=.008;auto_scroll_x=0.008;scroll_y=0.03"/>
+    <property name="bg_x" value="graphic=p1_panselo_bg_clouds;add_x=0;add_y=0.46;scroll_x=.008;auto_scroll_x=0.012;scroll_y=0.0325"/>
+    <property name="bg_z" value="graphic=distant_panselo_01;add_x=0;scroll_x=0.012;add_y=0.95;scroll_y=0.04"/>
+   </properties>
+  </object>
+  <object id="4" name="lighting" class="shader=diffuse;intensity=1.2;gales_light_power=7;color=dde0ff" x="64" y="320" width="128" height="64"/>
+ </objectgroup>
+ <objectgroup id="8" name="solid_collisions" visible="0">
+  <object id="29" x="144" y="0" width="688" height="48"/>
+  <object id="30" x="0" y="448" width="320" height="64"/>
+  <object id="31" x="576" y="48" width="256" height="48"/>
+  <object id="32" x="608" y="96" width="224" height="48"/>
+  <object id="33" x="736" y="288" width="96" height="224"/>
+  <object id="34" x="144" y="48" width="320" height="48"/>
+  <object id="35" x="144" y="96" width="288" height="48"/>
+  <object id="36" x="0" y="288" width="304" height="112"/>
+  <object id="37" x="464" y="192" width="112" height="192"/>
+  <object id="38" x="680" y="400">
+   <polyline points="0,0 24,0"/>
+  </object>
+  <object id="39" x="496" y="160" width="48" height="32"/>
+  <object id="40" x="144" y="144" width="256" height="48"/>
+  <object id="41" x="144" y="192" width="224" height="48"/>
+  <object id="42" x="144" y="240" width="192" height="48"/>
+  <object id="43" x="640" y="144" width="192" height="48"/>
+  <object id="44" x="672" y="192" width="160" height="48"/>
+  <object id="45" x="704" y="240" width="128" height="48"/>
+  <object id="47" x="416" y="496" width="320" height="16"/>
+  <object id="48" class="profile=GRASS" x="320" y="448" width="96" height="64"/>
+  <object id="50" x="388" y="432" width="24" height="16"/>
+  <object id="84" class="profile=GRASS" x="416" y="448" width="16" height="48"/>
+  <object id="85" class="profile=GRASS" x="432" y="480" width="16" height="16"/>
+  <object id="86" x="720" y="480" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup id="9" name="animated" visible="0">
+  <object id="53" name="AT" class="sprite=38;sort=fg_tiles,100;scale=vec3(1/1/1);color=ffedc1;alpha=0.2;use_all_bright" x="416" y="0" width="208" height="208">
+   <ellipse/>
+  </object>
+  <object id="72" name="AT" class="sprite=0;sort=bg_tiles,-2;scale=adapt;color=fcc568;use_all_bright;alpha=0.3" x="416" y="32" width="208" height="112"/>
+  <object id="73" name="AT" class="sprite=38;sort=fg_tiles,100;scale=vec3(2/2/1);color=ffa359;alpha=0.1" x="416" y="240" width="208" height="208">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="objects">
+  <object id="5" name="end_door" class="id=0;facing=right" x="304" y="416" width="32" height="32"/>
+  <object id="6" name="door" class="profile=TOUCH_TRIGGER;open=P1_anuri_temple_01;id=12" x="80" y="288" width="96" height="192"/>
+  <object id="8" name="trigger" class="GIS=cutscene,line$FOCUS_SCRIPT_ZM0_1;ql=SI_FALSE,HEART_ANURI_1;remove" x="352" y="384" width="32" height="64"/>
+  <object id="9" name="puzzle" class="type=p_hitswitch;angle=90;profile=-2;GIS=FLIP_ON:GIS_PACK,1@FLIP_OFF:GIS_PACK,1" x="432" y="432" width="16" height="16"/>
+  <object id="10" name="puzzle" class="type=p_hitswitch;angle=90;profile=-2;GIS=FLIP_ON:GIS_PACK,2@FLIP_OFF:GIS_PACK,2" x="464" y="432" width="32" height="16"/>
+  <object id="11" name="puzzle" class="type=p_hitswitch;angle=90;profile=-2;GIS=FLIP_ON:GIS_PACK,4@FLIP_OFF:GIS_PACK,4" x="512" y="432" width="16" height="16"/>
+  <object id="12" name="puzzle" class="type=p_hitswitch;angle=90;profile=-2;GIS=FLIP_ON:GIS_PACK,3@FLIP_OFF:GIS_PACK,3" x="544" y="432" width="32" height="16"/>
+  <object id="13" name="puzzle" class="type=p_hitswitch;angle=90;profile=-2;GIS=FLIP_ON:GIS_PACK,5@FLIP_OFF:GIS_PACK,5" x="592" y="432" width="16" height="16"/>
+  <object id="14" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=1;instruction=26,22,31,22" x="384" y="352" width="80" height="16"/>
+  <object id="15" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=1;instruction=33,22,38,22" x="496" y="352" width="80" height="16"/>
+  <object id="16" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=2;instruction=27,20,31,20" x="400" y="320" width="80" height="16"/>
+  <object id="17" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=2;instruction=33,20,37,20" x="496" y="320" width="80" height="16"/>
+  <object id="18" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=3;instruction=28,18,31,18" x="416" y="288" width="80" height="16"/>
+  <object id="19" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=3;instruction=33,18,36,18" x="496" y="288" width="80" height="16"/>
+  <object id="20" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=4;instruction=29,16,31,16" x="432" y="256" width="80" height="16"/>
+  <object id="21" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=4;instruction=33,16,35,16" x="496" y="256" width="80" height="16"/>
+  <object id="22" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=5;instruction=30,14,31,14" x="448" y="224" width="80" height="16"/>
+  <object id="23" name="puzzle" class="type=p_liftdoor;profile=-3;puzzle_id=5;instruction=33,14,34,14" x="496" y="224" width="80" height="16"/>
+  <object id="24" name="end_door" class="id=12;facing=right" x="208" y="416" width="32" height="32"/>
+  <object id="28" name="AONC" class="type=P1_ANURI_CORPSE" x="384" y="400" width="32" height="32"/>
+  <object id="51" name="loot" class="name=FOCUS_PT;id=3;collected_GIS=FILE_MARK_SI,HEART_ANURI_1,true;ql=SI_FALSE,HEART_ANURI_1" x="512" y="144" width="16" height="16"/>
+  <object id="52" name="bulb2" class="intensity=7;z=-8;range=10;color=ffedc1;diameter=60" x="160" y="384" width="80" height="80">
+   <ellipse/>
+  </object>
+  <object id="67" name="bulb2" class="intensity=8;z=-8;range=10;color=dcceff;diameter=90" x="528" y="224" width="128" height="144">
+   <ellipse/>
+  </object>
+  <object id="68" name="bulb2" class="intensity=8;z=-8;range=10;color=dcceff;diameter=90" x="384" y="224" width="128" height="144">
+   <ellipse/>
+  </object>
+  <object id="69" name="bulb2" class="intensity=7;z=-7;range=10;color=ffedc1;diameter=90" x="480" y="384" width="80" height="80">
+   <ellipse/>
+  </object>
+  <object id="70" name="bulb2" class="intensity=8;z=-11;range=15;color=dcceff;diameter=90" x="448" y="48" width="144" height="144">
+   <ellipse/>
+  </object>
+  <object id="71" name="bulb" class="intensity=4;color=ffedc1;range=3;z=-2" x="496" y="128" width="48" height="48">
+   <ellipse/>
+  </object>
+  <object id="74" name="bulb2" class="intensity=4;z=-8;range=10;color=ffedc1;diameter=60" x="336" y="400" width="96" height="96">
+   <ellipse/>
+  </object>
+  <object id="75" name="bulb2" class="intensity=4;z=-8;range=10;color=ffedc1;diameter=60" x="608" y="400" width="96" height="96">
+   <ellipse/>
+  </object>
+  <object id="76" name="bulb" class="intensity=4;color=ffedc1;range=3;z=-2" x="368" y="400" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="77" name="bulb" class="intensity=4;color=ffedc1;range=4;z=-2" x="656" y="368" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="78" name="trigger" class="GIS=common_sfx,150;ql=SI_FALSE,HEART_ANURI_1;remove" x="384" y="160" width="272" height="32"/>
+  <object id="79" name="loot" class="id=45;collected_GIS=FILE_MARK_OC,herb_at01b1;ql=OC_ABSENT,herb_at01b1" x="464" y="176" width="16" height="16"/>
+  <object id="89" name="water" class="sort_bg=bg_tiles,11;sort_fg=fg_tiles,100;use_flat_corners;surface_color=78fde7;splash_color=8fffed;scale_x=1.05" x="407.5" y="455" width="368" height="176"/>
+ </objectgroup>
+</map>

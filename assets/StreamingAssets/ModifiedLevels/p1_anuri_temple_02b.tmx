@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="68">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
+  <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
+ </tileset>
+ <layer id="1" name="back" width="48" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztl2GOgyAQhT3FknQ3G2/RtfunR9mjcI62bjyKR/EoO4OMnSIgYEE3KclLJyj6MTxGWlX7aW+NX3tv/5kf+OSSSr6rlFL4D6dKumSsuRQ6bkGXL3UPjsd45o+WaclLazzFx7vmIEZexQyxvDVVL/T7ruN12X0rDaAzqAf9gLLz+/JPsvCrvvdT1VEfsNbITs/Vc+iQ/zBKecQXl+InL/E+zs7mUOO9F7xXj/PFBfM/eQr8M4hxPtJ8tojwTkn/sPyjfzrso5hL8D01juNemsWl+FvLntb7VM2N6g7n35N/XPymHvL/WNOK1P+Q/Xttpv1rrZ/eZ2/kH0f9UfXzpq9T/Qx5Pmlj/u7D8AbOYYl3DXsKP/rE5n/6rnF++kZ/Hu/vC4lz8rv2r7Dsxz3y67OapNjFD2txxnEtcP0e1a9cilP5l861nDWUn38HloStTaw/DuaB18CQ/ON9kPM6lt2cRwL/dL43RTXQd/5h/Kr+29jN/wMF+KkPPdzH1H8bV2Z+m3/QBzXlNITfdobw7anM/INmVznNwf+s80/M+VzX/Rm/yzOxys0vHHzPYF/BH7XGObUFf1rWntdS13rNmr/aq+Vof1zLlp4=
+  </data>
+ </layer>
+ <layer id="2" name="back" width="48" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt1EEKgzAQBdA5hYuCO6FnUCt4NE9hdddVvUaO1sluYiOGLOKM/AdDYFbfbwgRAABo9xjoI09rlld4Sk1LU9EwoF7d0cjjIvu/nUac0890ttMq1v/RP9HoLv3Ld99i//Ldt9S/t/bhWOrf48xOzlH/z/aCcBli/X85+2Ynv6n7v2ft/u+l9D93hcJkSOm/6guFyZDUP+d/K/4GAIA7+AHYdDKO
+  </data>
+ </layer>
+ <layer id="3" name="back" width="48" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlsENgzAMRT0F4lroDo3gAKMwSqfgUg6QMEhH60cCNUqTAhKQ0PpJXyixDx9iHBMxDMOsJxZEsqAyEuP69pnTZciBFNRnx/rTSQqq4LWy7Je1eK/Tgp56/JIjB0qha763y+Wo8VuanqThv0NcQgrqPfvXzz/VPE37Q50khn/mP2kyuj9GNR77xpaYvWUCfbMdnuhDLXppe6Clxdi8u3pqCKytn+Ee293UxijtTJLA/Msf+Wdd2GadMxFKvaiZ+z4W36JhYs5gE5HlXVy5PnHNYLXF/1nmtbk684lrLmAYhmGYvXgBv305dA==
+  </data>
+ </layer>
+ <layer id="4" name="front" width="48" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzNmFFy3CAQRDlG7K9UjrH2h4/CUeYWQvnyUXIUjhKB5kFLluMsUmJTRWkXIdT0zPQMCuH+Nt1Cntce0nq1ZSyW336tc6b1vsncMi+U+Wn9H/35Mlbmm69V7gV/Lpd5fq/Omdax+nsAfsXs65c1wVAwRcXqGLPjViyZ/fnc4OOsyf/s62R/j8me6hoj+GWtxuW8vo/OfipG4RVMEduxB58X3HZqw8haqWMP7PUE/gCOactVnDo2cJv6gc833Qf2Uy6cH97Be+Gu8jfSpm5z1smp85K/PYXwuHbzrr91LBzdX55v+03dnlHegw2H+MeO2Fe4rzG3YPg+xszaludfJdbxp+aPqftXHFl/lrVT93kjTq/AP3U/VI3Dz1rMjLTUfbnFm/t17Rfxj88TD027RI+GGnix7dx75eYi/jV289R5NzTphP6gM1F0E57K++P+mZ8lJpc4/Zvu/Gf1SdE78sew/5M75m5LdLza5Ij/gqnM+/Ecfi1zX+cePy/L/5fUtbHlJvFLcmREQ6cT/oOfqI6j5WX9I/wPTzWuVTf3+hlUP9E04hRtk/yRR/WfOiHdNrmReuEq/ye3Weo5Br0zeBtZX+I1y3vQh3jk/3fix4fg3sQ/yevVb0fW1zXFd1quPMv/w9u8/G7+HmmiA8QAOTK6/scz+P9122k/OmLUxV8df+oxix6gDTGtGm7zO3r/FdoHdeXReNX9j+xyT477n3y49pfrH/Hv6gaTOGt2Fq220fPX1U15X/zPRNtavSxnIPY1XP9c3aTeQcvIsaoPaHSQfdhn4j7gndyS556jtE5nnFopfiZ+553ajJo2y5jWuPotop0nR957r0agE0fjO39X396cMThf6/eTE/WnxlWWs1Eb44zpnVqv+YHEZpb/nFeMGlf4zsSC1NRxBH+6bc8Ak5wxpN4l9qjDsD1ncWr4KBjbtwz24PM3a+hZYQQ/nMr5NOt1zzvnqFn2JLqSZY/ofquP562NN98gTnz/gUdqaHhiX3qv1dupY8Sn2aMJpqjc4Itpq52cz2wUf+prgl9rOBPOTep15RX/wx5ReTk4t2AX5SWP4E99zQxO5Vv8al+nonthx/PmPCdxtb+GtI2JIf41fiSe0A3V842+iA80/YBfqXmy5i/NDWo/NOM3jGDZMg==
+  </data>
+ </layer>
+ <layer id="5" name="front" width="48" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztluEJhDAMhTNKD3QLsas4SkfxR7uHo9woF88/UgykYjCF94FUQgpPzEtCBIBPxpmSRa41OVLYz9KgqSXXmjEeWvg7ltY7HiisJTfquXMH6GF/quKefHymCPrruCcfn+Ha/l7F2bd13mKv5hlY6+7bS6R66wWp3rwzcP0PkdY8/5/A74H/0/a2Li0FM+AxeuntEnd6u6e+U/d2zY7mqe/Us0izo0lzDtjRm69rvO5sWrzvbGEi+kyU+ExvawEAAHDwAzarMuo=
+  </data>
+ </layer>
+ <objectgroup id="6" name="meta" visible="0">
+  <object id="1" name="config" class="id=0;zoom_allowance=1;follow=vertical" x="312" y="48" width="320" height="400"/>
+  <object id="2" name="lighting" class="shader=diffuse;intensity=1.2;gales_light_power=7" x="112" y="48" width="112" height="64"/>
+  <object id="3" name="level_art" x="112" y="128" width="112" height="64">
+   <properties>
+    <property name="bg_y" value="graphic=anuri_temple_02;add_x=0.06;add_y=0.00;scroll_x=.020"/>
+    <property name="bg_z" value="graphic=anuri_temple_01;add_x=-1.11;add_y=0.1;scroll_x=.022"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="animated" visible="0">
+  <object id="48" name="AT" class="sprite=38;sort=fg_tiles,100;scale=vec3(1/1/1);color=ffa359;alpha=0.1" x="352" y="192" width="144" height="128">
+   <ellipse/>
+  </object>
+  <object id="54" name="AT" class="sprite=38;sort=bg_tiles,100;scale=vec3(1/0.5/1);color=FFC100;alpha=0.2;use_all_bright" x="560" y="208" width="240" height="112">
+   <ellipse/>
+  </object>
+  <object id="55" name="AT" class="sprite=38;sort=bg_tiles,100;scale=vec3(1/0.8/1);color=FFC100;alpha=0.1;use_all_bright" x="464" y="48" width="176" height="144">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="objects">
+  <object id="4" name="door" class="profile=TOUCH_TRIGGER;open=P1_anuri_temple_02;id=4" x="712" y="192" width="48" height="144"/>
+  <object id="5" name="end_door" class="id=4;facing=left;start_zoom_lvl=1" x="648" y="256" width="32" height="32"/>
+  <object id="6" name="puzzle" class="type=p_weightswitch;profile=0;puzzle_id=1" x="416" y="256" width="16" height="16"/>
+  <object id="7" name="puzzle" class="type=p_liftdoor;profile=-2;puzzle_id=3;instruction=26,22,26,26;ql=OC_PRESENT,solved_anuri_temple_02b" x="416" y="320" width="16" height="80"/>
+  <object id="8" name="L" class="ql=OC_ABSENT,solved_anuri_temple_02b;type=P1_ANURI_METAL_POT_S" x="560" y="128" width="16" height="16"/>
+  <object id="13" name="trigger" class="GIS=FILE_MARK_OC,solved_anuri_temple_02b|puzzle,id$3,msg$ACTIVATE" x="261.5" y="272" width="106.5" height="128"/>
+  <object id="14" name="L" class="ql=OC_PRESENT,solved_anuri_temple_02b;type=P1_ANURI_METAL_POT_S" x="416" y="256" width="16" height="16"/>
+  <object id="15" name="door" class="profile=TOUCH_TRIGGER;open=P1_anuri_temple_02c;id=5" x="184" y="272" width="48" height="144"/>
+  <object id="16" name="end_door" class="id=5;facing=right;start_zoom_lvl=1" x="264" y="355" width="32" height="32"/>
+  <object id="17" name="end_door" class="id=0;facing=left;start_zoom_lvl=1" x="648" y="256" width="32" height="32"/>
+  <object id="44" name="bulb2" class="intensity=6;z=-8;range=10;color=ffa359;diameter=80" x="592" y="224" width="96" height="80">
+   <ellipse/>
+  </object>
+  <object id="45" name="bulb" class="intensity=6;color=ffedc1;range=3;z=-1.5" x="384" y="240" width="80" height="64">
+   <ellipse/>
+  </object>
+  <object id="46" name="bulb2" class="intensity=7;z=-7;range=10;color=ffedc1;diameter=90" x="512" y="96" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="49" name="bulb2" class="intensity=6;z=-8;range=10;color=ffa359;diameter=80" x="224" y="304" width="96" height="80">
+   <ellipse/>
+  </object>
+  <object id="50" name="bulb2" class="intensity=6;z=-8;range=10;color=ffedc1;diameter=70" x="528" y="272" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="51" name="bulb2" class="intensity=4;z=-8;range=10;color=ffedc1;diameter=70" x="480" y="320" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="53" name="bulb2" class="intensity=6;z=-8;range=10;color=ffa359;diameter=80" x="319.5" y="355.5" width="80" height="80">
+   <ellipse/>
+  </object>
+  <object id="57" name="tutorial_trigger" class="exist_ql=SI_FALSE,BOSS_SLIME_DEFEATED;tut_msg=LEDGE_DROP_TUT;tut_location=tmx(23/14.5);appear_ql=ALWAYS_TRUE;exit_ql=ALWAYS_FALSE" x="285" y="159.5" width="48" height="16"/>
+  <object id="62" name="L" class="ql=OC_ABSENT,solved_anuri_temple_02b;type=P1_ANURI_METAL_POT_L" x="448" y="352" width="32" height="32"/>
+  <object id="63" name="puzzle" class="type=p_weightswitch;profile=0;puzzle_id=2" x="448" y="128" width="16" height="16"/>
+  <object id="64" name="puzzle_rerouter" x="390.5" y="121" width="109.75" height="156.75">
+   <properties>
+    <property name="1" value="1=FLIP_OFF==puzzle,id$3,msg$FLIP_OFF"/>
+    <property name="2" value="2=FLIP_OFF==puzzle,id$3,msg$FLIP_OFF"/>
+    <property name="4" value="1,2=FLIP_ON,FLIP_ON==puzzle,id$3,msg$FLIP_ON"/>
+   </properties>
+  </object>
+  <object id="65" name="L" class="ql=OC_PRESENT,solved_anuri_temple_02b;type=P1_ANURI_METAL_POT_L" x="428" y="353" width="32" height="32"/>
+  <object id="67" name="trigger" class="GIS=FILE_MARK_OC,solved_anuri_temple_02b" x="407" y="203" width="96" height="128"/>
+ </objectgroup>
+ <objectgroup id="9" name="solid_collisions" visible="0">
+  <object id="23" x="560" y="288" width="384" height="224"/>
+  <object id="24" x="528" y="320" width="32" height="192"/>
+  <object id="25" x="496" y="352" width="32" height="160"/>
+  <object id="26" x="112" y="384" width="384" height="128"/>
+  <object id="27" x="592" y="0" width="352" height="240"/>
+  <object id="28" x="112" y="0" width="480" height="80"/>
+  <object id="29" x="112" y="80" width="240" height="224"/>
+  <object id="30" x="352" y="272" width="96" height="32"/>
+  <object id="33" x="368" y="176">
+   <polyline points="-16,0 48,0"/>
+  </object>
+  <object id="34" x="368" y="224">
+   <polyline points="-16,0 48,0"/>
+  </object>
+  <object id="35" x="400" y="304" width="48" height="16"/>
+  <object id="60" x="416" y="144" width="176" height="48"/>
+ </objectgroup>
+</map>
