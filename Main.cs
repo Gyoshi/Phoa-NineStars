@@ -377,4 +377,14 @@ namespace NineStars
             levelPathPrefixField.SetValue(__instance, path);
         }
     }
+
+    // Pooki mad
+    [HarmonyPatch(typeof(AnimalLifeLogic), "InitializePuki")]
+    public static class Pooki_Patch
+    {
+        public static void Prefix(string object_code)
+        {
+            PT2.save_file.OC_Write(object_code + "angry");
+        }
+    }
 }
