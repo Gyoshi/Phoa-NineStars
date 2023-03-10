@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="141">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="142">
  <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
   <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
  </tileset>
@@ -141,6 +141,7 @@
    <ellipse/>
   </object>
   <object id="140" name="puzzle" class="type=p_lizard;instruction=tmx(45/17),tmx(58/19),tmx(54.875/17);sort=bg_tiles,11" x="768" y="288" width="16" height="16"/>
+  <object id="141" name="enemy" class="type=p1_slime;instruction=hang" x="576" y="240" width="32" height="16"/>
  </objectgroup>
  <objectgroup id="10" name="animated" visible="0">
   <object id="83" name="AT" class="sprite=0;sort=bg_tiles,-2;scale=adapt;color=fcc568;use_all_bright;alpha=0.2" x="80" y="192" width="800" height="96"/>

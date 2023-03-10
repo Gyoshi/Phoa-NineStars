@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="123">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="130">
  <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
   <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
  </tileset>
@@ -68,14 +68,14 @@
   <object id="100" name="L" class="type=P1_CHEST_S;destroyed_GIS=SPAWN_pickup,P1_RAI,25|FILE_MARK_SI,PANSELO_MONEY_0,true;ql=SI_FALSE,PANSELO_MONEY_0" x="632" y="336" width="16" height="16"/>
   <object id="116" name="L" class="type=P1_TALL_METAL" x="304" y="304" width="32" height="48"/>
   <object id="117" name="L" class="type=P1_METAL_L" x="273.5" y="272" width="32" height="32"/>
-  <object id="118" name="L" class="name=BOX1;type=P1_METAL_L" x="307" y="272" width="32" height="32"/>
+  <object id="118" name="L" class="name=BOX1;type=P1_METAL_L" x="305.5" y="272" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="11" name="objects_tutorial">
   <object id="113" name="tutorial_trigger" class="name=push_tut;exist_ql=ITEM_DONT_HAVE,int_list(6);tut_msg=JUMP_TUT;tut_location=tmx(29/18.5);appear_ql=ITEM_DONT_HAVE,int_list(6);exit_ql=ITEM_HAVE,int_list(6)" x="432" y="320" width="32" height="32"/>
   <object id="114" name="tutorial_trigger" class="exist_ql=ITEM_DONT_HAVE,int_list(6);tut_msg=EQUIP_BAT_TUT;tut_location=tmx(27.5/17);appear_ql=ITEM_HAVE,int_list(6)&amp;EQUIPPED_BAT,0;exit_ql=EQUIPPED_BAT,1" x="272" y="296" width="304" height="64"/>
   <object id="115" name="tutorial_trigger" class="exist_ql=ITEM_DONT_HAVE,int_list(6);tut_msg=ATTACK_TUT;tut_location=tmx(25/18.5);appear_ql=EQUIPPED_BAT,1;exit_ql=ALWAYS_FALSE" x="272" y="280" width="80" height="80"/>
  </objectgroup>
- <objectgroup id="12" name="objects_day">
+ <objectgroup id="12" name="objects_day" visible="0">
   <properties>
    <property name="ql" value="SI_FALSE,NIGHT"/>
   </properties>
@@ -147,7 +147,7 @@
   <object id="13" x="144" y="112" width="512" height="96"/>
   <object id="14" x="48" y="352" width="544" height="64"/>
   <object id="15" x="656" y="112" width="97" height="304"/>
-  <object id="16" x="48" y="272" width="224" height="32"/>
+  <object id="16" x="48" y="272" width="225.273" height="32"/>
   <object id="17" x="48" y="304" width="256" height="48"/>
   <object id="18" x="48" y="112" width="96" height="160"/>
   <object id="19" x="576" y="272" width="80" height="32"/>

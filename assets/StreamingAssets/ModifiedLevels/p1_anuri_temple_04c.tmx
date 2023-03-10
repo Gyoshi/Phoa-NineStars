@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="81">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
+  <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
+ </tileset>
+ <layer id="1" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztluEJxCAMhZ1EOkgLN4qjOIk4yo3SUe5FPChHy1WuJod9H/jLCO/FGOMcIYQQQgj5hTS7bK2B2OKX9jOom3i5ECPSUvycj4d35Cx2E6QM/Ew1B6u1FqIL7jzg7jPqOZ/9C6ReED/1VabD27u8Z9/WA6ZuohSB71XePdbzqAdKvxu1N2xrXnKws196vaxRc0DIHmUumN3jaE9XTR9a5r6Pc/FSIUb49tk34IzMDKGbKEVk7q05iF9jN97lXYzyH9QcRGsdlqSb+yeEkH/nBZFmO5Q=
+  </data>
+ </layer>
+ <layer id="2" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztl1FuwyAMhnnYeoRG2sOUQ0zasvWhR9lROMekVBylR+lR5j/FGaNQQZIGJ4qlXzhUOP4MOKpSYXv5DCvFYmvn1Fgrnf/Gv/Fv/PL52+ZPVVOeuzT/HO+Uxk/cl0dKIr+37+aRkspvvrr8jnascf7bd3U8kWg85/q0XiMOxUOsM0ap55/3Hezwfz663Dt7JR6Ok+ODn+IgtrY1EM3P7AH+3lJ9Wvvt8nMNJPPj7Pv8dI4VnWeMOtd3+Dm+lszv5uruv93LZPE7fX7ElMoPxfgtS50qWntZC//Y/r90ftgE/X/p/L3l+Gvgn7L/l+TfN3FVTbzHU85miO59HyTy2+9zqJ8bb2TfnzeB324kdf9j33+J/f90mJbf1uAmV6n9n/jr3BqM5O9NSv/PrcFQfsn9HzWYgj90/1tnfqiq6/++f3NS+1/onbs3pZ9JT1cp8jHXz/OI+LG8/RosgZ+fXX7fd5+HMs3JP0eOG/96+XGP9yPu79L5SyvVfgEeSNx1
+  </data>
+ </layer>
+ <layer id="3" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt0sEJgDAMQNEsIohjeKmjOYroIo5mem4LARto9D/IRaW0/YoAAAAAAGAzrbK13l1JjtrzJcl86tTW0rl77c2b7jXPPvqaXjx6RfoH6E9/+petLGdoffOF/pYzvLm7UdCf/n/un/XsFak9ACCuBwfSMgo=
+  </data>
+ </layer>
+ <layer id="4" name="back" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztl21uwjAMhnMKxC9gmaBHKANGOQpHySn2E7pC4RocZUfZ6wVLoTQprHy0wo8UJaGpldd246CUIAiCIAjC/3lP1OLZe3g0OlGm+Bv8MKA+n4XfHX6ev9s2shL9DPQFyUv0b4451I1rbethYJ/Gl/d5hX6vzXE78gK5P0D8B7xfzvs6dMa2747rWmoHnYLOrxfRzbRZL853M5ooFaENp9Xrs1gdfM/6c/sNwY6BPbJrqurHs6H6NYLuCC2/QH+IfmJ72DF7aN9Z/ab2Ju8IxWcH3Xu0YUmsKKaIeVplpzdXas3xh2b4k/xqmn4/oPo+gu5oZu9++pjflOeuphC0boV1HH8C/jTwqym7HzSJYn2/JNaMr1aS7yI6Vxqe+0X0FdpD8BnZm6qfW9i7J5lzR/2OT+eMds78a/4f6RvcpeqCvS+haclzio0bZx2frE25hulAnWsLpO0N2hHXJfpUH7Vj/PeMxm499513PdwN+hM7Ltb/jZMP8N0Z0cdttNQhs9pTGiMnF5zn7Aei7AxnVtC+npTaPbhz+I7sGJ7voH3fAP0+fN+7EGabNP9cFwRBeAV+Ac+Cb5c=
+  </data>
+ </layer>
+ <layer id="5" name="front" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzdWFluFDEQNWI5Q5Yf7pDww/xwFB/FQoEruBwlUo6So9RRsLv9ql5bM8DQZoSwZPWMe6l6tT47hONDPodY1qm5TvqPtXZN7ZrXa1tLfa1dA67tHenr0p+R9T6ewTfadZHdr6k/034Hkhv7N0OXu8y+tqzvHZCVXUbs+mvXt60FYOk6hez4gUGB+wTG9i7bm3Ettu42i/Scsn60bnL3DmBg/UiPjR0K+RkxIR1btx9w4Zvwl4r/j12mdlvBn7BhLK6Ljmvkm8XeE/BrcR0Qh+zrRLjhW8QEYsH07TmU+lTYRbY4k3guJHo+liPyYQfEAvkk7sXP+MT9Dz9F2drA6gB8Lp6LcbCd5q0fE9kvQRbFPuIeuaXiOsGW8JXJneD/NPif4x46avFY1bL1GWIbsa/Ia8qpJP592FApvsc4gT/M5sW/azVgRv6L+9lwiPs7itti0eHqEMLNwetA9meV/Mo5BX2thnLNQZ2jWAJ2Ff9+JD9BzzTD/+Q3008cD7DgXqzYP7b3bg/hlWqS3aeYNh9lwpc9lpF7ke3I9uF6UzwGOS91L/7i37LeTLaP3d+YqeJ+wbvNBm0N9478Pvaf1+xelQPssKGSTtZPSb/l/l786M2Ui9zXzN9/e1Q5L1RXUA9QRxLyYvDX7kEcw+KRfHBp/KgFqMFptEH2fFvW9sodZOC/1YSqV9yP7tejykEPtDgEByAuqZQPaRL/Ac8MJMdi4ZL+H3gDar1SLBgfQc7ulZtJZt76P0mtT6X1unWGcT4ezpP1eOI7mHJw7jT0gUD5zzx49wA3Y74FHtfmUP8D1+7rM3Pjenifr1fEKajuo94Z70UtKJPin/gE8DPH0EvGP/e8frV8Byeh+hBn9D/iIMznrM9eOP8T7wmY65EdEANT8DO/FdqHoiZeED/XYN4PjJwctS/OqH/iNT+RDcAJ9IL974Vi27g41Wbkp3GfSfsf2BR7HKs7nf/EY+8913r1VGvX05nX5xM9g/if8VvqTbYXwx4A/pqAn/t9yr4fXWRcMv6pt6Pe8R4okH62R5gg99SeZLnWnpX2o/stPcBz7EyC9iFW+/p94+z/y6D8B78BLwHn4xo1jf/8KwP8l/ovuJ6dh6DuoTaXCfznT8fbuxC+3q1XzDeffP3c0eKfOR7lAOOG78ELdo+f8fFT86Hi+1bn93Wm+js9rHOzfu535eA1j/Lf8p65MPjaXvyorUJ5RWcits+mvrvoUvn6l9uq84f7kN7X+e5+ORtq/fL1aj0bi+RPPr8BFvAd+Bu1LVJ9s70wnX2Bs03Z/4mf86ay1VdJl0gykY+LDW5oNtzUnwLFLrAbh+MzjLJ9drP/Eu8J0Mf6/4z+B7nEPcEtTDfoSzxEaS8KfIhbcHjDBb/SvhbxZXudMmDmmEQ+kDzUwDgB/+asAbk18Ew7fyjuw0DPYU3F34n0DYth8ZhCHiSKPfAa3pcY76XaaFxh7yjuO7at8S3YBTjz0IvkSBwwVsaWyWZDLnF/R/wjD/FtqwWZfLEXv3h9Aw7s/WL2dfNjofMyPEfPIH42fYvwBLIrnkM+IAc0f97sSZXspVz/zon/H8TtU1I=
+  </data>
+ </layer>
+ <layer id="6" name="front" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztl1ESgiAQhvcc9qKVV/BFg6t0FK9hvkDaPTpKR+ln0qkJeigKJtxv5h9kcZn9gRmRiGEYxp9DRdRXsasIS1aRMi18n1/5n99JlWzy3E8+TX+1gHMw+zb7/rjHrnOA8XO4ysLy7K1P/Ly/i2qIdHN7HtCOTdx6QpPviApoDW2g7S52RWFR8KuhIzRAYyL+S2H1W8/5vPJDcxJWv/Wczys/NCdJ7SjvNZfSc/8982Nj1mMQn3/nsZaX71XDMAzDMAzzO46Oe2uOu3EBraGNcCQlgoI3PfnraqJVbcdnMLbv6rD1/ZpCYq+lHTexwhFPDXhslcOniekF+Nd//s/GMEvmCkplOJc=
+  </data>
+ </layer>
+ <objectgroup id="7" name="meta" visible="0">
+  <object id="45" name="particle_emitter" class="type=FOREST_POLLEN;name=pollen;ppts=0.07" x="320" y="368" width="128" height="32"/>
+  <object id="46" name="lighting" class="shader=diffuse;intensity=1.2;gales_light_power=7" x="0" y="0" width="112" height="64"/>
+  <object id="47" name="config" class="id=0;zoom_allowance=1" x="160" y="96" width="528" height="352"/>
+  <object id="48" name="level_art" x="0" y="80" width="112" height="64">
+   <properties>
+    <property name="bg_y" value="graphic=anuri_temple_02;add_x=.12;add_y=0.32;scroll_x=.020"/>
+    <property name="bg_z" value="graphic=anuri_temple_01;add_x=-1.11;add_y=0.41;scroll_x=.022"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="animated" visible="0">
+  <object id="69" name="AT" class="sprite=38;sort=bg_tiles,100;scale=vec3(1.5/0.5/1);color=FFC100;alpha=0.15;use_all_bright" x="288" y="112" width="304" height="112">
+   <ellipse/>
+  </object>
+  <object id="70" name="AT" class="sprite=38;sort=bg_tiles,100;scale=vec3(1.5/0.5/1);color=FFC100;alpha=0.15;use_all_bright" x="288" y="208" width="304" height="112">
+   <ellipse/>
+  </object>
+  <object id="71" name="AT" class="sprite=38;sort=bg_tiles,100;scale=vec3(1.5/0.5/1);color=FFC100;alpha=0.15;use_all_bright" x="288" y="304" width="304" height="112">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="objects">
+  <object id="5" name="end_door" class="id=0;facing=right" x="176" y="368" width="32" height="32"/>
+  <object id="6" name="door" class="profile=TOUCH_TRIGGER;open=P1_anuri_temple_04;id=7" x="96" y="288" width="48" height="160"/>
+  <object id="7" name="end_door" class="id=7;facing=right" x="176" y="368" width="32" height="32"/>
+  <object id="8" name="AONC" class="type=P1_ANURI_SKULL" x="368" y="368" width="32" height="16"/>
+  <object id="9" name="AONC" class="type=P1_ANURI_SKULL;face_right" x="272" y="192" width="16" height="16"/>
+  <object id="12" name="L" class="type=P1_ANURI_METAL_POT_L" x="544" y="376" width="24" height="24"/>
+  <object id="14" name="L" class="type=P1_ANURI_METAL_POT_L" x="437" y="280" width="24" height="24"/>
+  <object id="18" name="L" class="type=P1_ANURI_CERAMIC_POT_L" x="576" y="184" width="24" height="24"/>
+  <object id="19" name="L" class="type=P1_ANURI_CERAMIC_POT_S" x="544" y="192" width="16" height="16"/>
+  <object id="20" name="L" class="type=P1_ANURI_CERAMIC_POT_L" x="592" y="376" width="24" height="24"/>
+  <object id="21" name="L" class="type=P1_ANURI_CERAMIC_POT_L" x="496" y="376" width="24" height="24"/>
+  <object id="26" name="L" class="type=P1_ANURI_CERAMIC_POT_L" x="428" y="255" width="24" height="24"/>
+  <object id="27" name="L" class="type=P1_ANURI_CERAMIC_POT_L" x="514" y="280" width="24" height="24"/>
+  <object id="29" name="L" class="type=P1_ANURI_CERAMIC_POT_S" x="304" y="192" width="32" height="16"/>
+  <object id="42" name="L" class="type=P1_ANURI_CERAMIC_POT_S;ql=SI_FALSE,MOON_ANURI_6;destroyed_GIS=SPAWN_loot,5,loot_GIS_MARK_SI$MOON_ANURI_6" x="608" y="192" width="16" height="16"/>
+  <object id="43" name="puzzle" class="type=p_lizard;instruction=tmx(22/13),tmx(32/14),tmx(24/14);sort=bg_tiles,12" x="352" y="208" width="176" height="32"/>
+  <object id="52" name="bulb2" class="intensity=6;z=-8;range=10;color=ffa359;diameter=80" x="112" y="336" width="96" height="80">
+   <ellipse/>
+  </object>
+  <object id="53" name="bulb2" class="intensity=6;z=-11;range=15;color=ffa359;diameter=100" x="368" y="96" width="144" height="144">
+   <ellipse/>
+  </object>
+  <object id="64" name="bulb" class="intensity=4;color=ffa359;range=4;z=-2" x="240" y="240" width="64" height="48">
+   <ellipse/>
+  </object>
+  <object id="65" name="bulb" class="intensity=4;color=ffa359;range=4;z=-2" x="576" y="240" width="64" height="48">
+   <ellipse/>
+  </object>
+  <object id="73" name="bulb2" class="intensity=6;z=-11;range=15;color=ffedc1;diameter=100" x="368" y="336" width="144" height="144">
+   <ellipse/>
+  </object>
+  <object id="74" name="AONC" class="type=P1_ANURI_CORPSE;face_right;GIS=FILE_MARK_SI,REGEN_BONE_RIN_2,true|SPAWN_pickup,P1_RAI,15;ql=SI_FALSE,REGEN_BONE_RIN_2" x="240" y="176" width="32" height="32"/>
+  <object id="75" name="L" class="type=P1_ANURI_CERAMIC_POT_L" x="367" y="278.5" width="24" height="24"/>
+  <object id="76" name="L" class="type=P1_ANURI_CERAMIC_POT_S" x="608" y="176" width="16" height="16"/>
+  <object id="77" name="L" class="type=P1_ANURI_CERAMIC_POT_S" x="592" y="160" width="16" height="16"/>
+  <object id="78" name="L" class="type=P1_ANURI_CERAMIC_POT_S" x="320" y="192" width="32" height="16"/>
+  <object id="79" name="L" class="type=P1_ANURI_METAL_POT_L" x="300.5" y="375.5" width="24" height="24"/>
+  <object id="80" name="L" class="type=P1_ANURI_METAL_POT_L" x="326.5" y="375.5" width="24" height="24"/>
+ </objectgroup>
+ <objectgroup id="10" name="solid_collisions" visible="0">
+  <object id="30" x="640" y="0" width="224" height="512"/>
+  <object id="31" x="96" y="400" width="224" height="112"/>
+  <object id="32" class="profile=GRASS" x="320" y="400" width="128" height="112"/>
+  <object id="33" x="448" y="400" width="192" height="112"/>
+  <object id="34" x="320" y="304" width="240" height="16"/>
+  <object id="35" x="528" y="208" width="112" height="32"/>
+  <object id="36" x="96" y="0" width="144" height="352"/>
+  <object id="37" x="240" y="208" width="112" height="32"/>
+  <object id="38" x="304" y="0">
+   <polygon points="0,0 0,128 -16,144 -64,144 -64,0"/>
+  </object>
+  <object id="39" x="320" y="112">
+   <polygon points="0,0 32,32 320,32 320,-112 0,-112"/>
+  </object>
+  <object id="40" x="304" y="0" width="16" height="112"/>
+  <object id="41" x="372" y="384" width="24" height="16"/>
+ </objectgroup>
+</map>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="74" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="89">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
+  <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
+ </tileset>
+ <layer id="1" name="back" width="74" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt1uENgyAQhmEmcRKbOAqjOIlhlI7SUXrXeMYfBQlCSvV9En7BmeOLCs4BAAAAAEoMD/f8jLG8fhldkOGrNtYRy0j3ebQ2loPV5j7nH63vQchY5yWH5PxVMzJL4fe2q09meBWyx3A2K6Am/Yf/uofWzp5TUu9t1OuqP0cZybzeHfQ8m2L1tqZBe91J3RM1BxmvyNy2pkFbXcm4H80yP3/L6g53AgAAAOAu3gjONlQ=
+  </data>
+ </layer>
+ <layer id="2" name="back" width="74" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztl9FthDAMhj3F0falN8WptC83SkdhCtRWqmAURrlR6pTQM8aByheOENnSryj5Yyn+SAIAWFhYbBmfJVQfqKdXqB5LuLgxbI+uj+POt4AxpwfkhIxcWxmncVBOXMbpGsZpPmpko9XWa79nfJdXFagD1s9VlPI83GuQsyJzEs9qYqL1/zsndU50fWS88wr5wfyirwOWtCYnaf4twu+RtjlB59aG7dl9w7VvcCz6ttX4hwicbj3Da3B6PvV7AlvwHFp8Pp3jofFjcLol7sXJMRik8XPl1Pg6mwAHd8YGST7P3xMner9xcU5LHNg5W+S4B05zfCRWvk431hV9f8KB9SVOo/yMOb0PCuwn8PtJ5Mjzc+XE3+tfL3AZJHHg/hrfBSlw4vcTf1+x+8b5nffPAX+UvwdOlJXEjc6rvWiddTn9/6acAv4kf2tOsf5VKDv6Xpf2n8ZXrCl1TqP7R+Kg9XPjhPfxnyQOWj8zTr+siKSzpfKNk3GKxUmxpiQ4BeqT6pRYGKcpoyicFLyMk3HKjtMMq+Q4/QA2FpVB
+  </data>
+ </layer>
+ <layer id="3" name="back" width="74" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt1MEJgDAMheG3gAvoxRnsAHW03gVdydFMNyg0JUX+D3IrJQmPSAAAAAAAxLuStKToLubzHCq3le2nRPfyF2QNwCit96W+s9tebzwAAACADmuWtqzdu+zfN3o2TzbPOWhPJXo2T+Spzax5+gAU0jbJ
+  </data>
+ </layer>
+ <layer id="4" name="back" width="74" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztmFFygyAQhjlFpw8dcdqX9Ai1iXgUjsIpOulLYJqX9hYexaN0V7RBgk3pqNG434xDXGGz/FkWDGMEQRAEQRAEQRDnJDkrDjkroU0jxhgYU0BbjhfZPHgSpznqvJ575dtDHEWtqYQxKvT8UfR/z5I4enFzmHOrUQjMM+hjAnbJA+M+hG+5fVAjHbm2EpubUWPWBmoEulYHr9YtuZ75628IOGqRsRTXpGv/rZ5NzUPGyrsXpqDt2PC+tcNl0L4ZKWbwyzjopLNTPsHvIbHtq2dTg1q4Ojm6Sbzafl+g0edIOoFf9H/G/XaMb/sfrU6wL0vYc6SrG+ZRo1f5LJjaiDidIA9wLZlL/cAvA/+d/qjRfjsfrXw93PvmucH2fVdfKtZ/Ys8PxrPV97zJT9e3tnXboEZvr0ztZ6LTNYA9rNI2d0rXjvsePFN+PV8rdFbq0pyLTMBeTh/NtDS1NvhOEuhbjB/RfNEX5u/X6RA8/+mbDhXXnGhrLX7u2/f76rTnp9D2vUSOFeu1cf8nCL3v/rVOJ/YMoIaMbUnE1Olk5TWMIIjb5hu+44In
+  </data>
+ </layer>
+ <layer id="5" name="front" width="74" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzdmFGS3CgQRDmGvV97jp7LcBRuAfhrjsZR3FLzqhJGjB0WsesYRSjUahAUWVlZBSHcu+ojtPwIqTxCrH634/n8r5XXM+XX7+N5fBOzt53fZ+l3vNfXmMfvcNx9LP4PvS/9TzvKqy+2hP7OHOd7fY0x2MmY3a7Uv019vrPPTZiwJci6zmfH73iGPleaMAx9PSm7nbaOPK4zdDzAPsiTsRg/Zf8/9jHVB9hEGzYH9Q9zM+9dnFib8iC7z3XtxovOJWw2jMSXrA1+JOlrvMzOG+UFPMMuswF+Z+ep8bXPjU3Gv86rHXxinTo3MWJxpbhl7x+Lc8S4KHan7lN8G8EN7OEn/arYUB134tq4T+yBm4xlHNUY3oBTzMIh5Wr1NaFH2NKEf6Yt1XEj5vg2yRwaw/BnHqNVx95sBPfqtsJDxQru4Z+TZ3dxUp8LV6LozKDngpPqyuxj05Iyfh9kreYLiRnTtTphK9/r/NhjfKsez0mwv42T5BDjqehsFB+ZLnNLzAwxK2vEt8ZT5skyn+oM6yrSNo0XxQba0DzNAYpd2oBTFE1I5FP5PcQX/BIe0B/cTKtkbU0waqpndfqffqIvpo/iR3IC/iW2YxWth+95T76D1+TSIe7I8cKDpnpbPr5bbiaOVUfgFzFD/tO1CUfJIzo2Po2Cp/koj741fdvAJ805jDtwQXQrZOe02ocuqf5YH11vcR0CL9Vz02vRAuUHOjDkjTp+Y/4Wn7cNfGqyPvyL783X1A/g+O0thH9edzrGOZ79nn/r+9w+97tq+9Bnmu+wBQ418QP57lzf3UuwN59rnpNcFtCu45unff/en33P9bTlXWIBLlts7MBJtKhlv8nbih/zn+9/G07Fc/CQN9HZu3Nkj3nTczQiP4Y6N0lMhvLkf33yvb6e4cfbhgX/xvVD5uQub5YH4hQf6MftS7hE3WS6WESjNNZFYy1H/Vf8es5jOa16nZdEM6xd68AN8640NvziOdzf3+7Xcr9zPedpq5xw6LnUMnBsS535la6u5+RnYjDuqDO/0tVxQsfZG8Qd+e4rXfCJvXiRWub/tu1vug6cpF5Gp7bE3Zxjd9xzjTDn8rvtq7t4XR6lxtkSd7rHFJ6yz+LswmpQ2bfbXra6Zp6/5xqh5/LAPu2ifagTF99zlsBeMsl+8cNeT37HTecq7L9tLuoQ9v5VzgmztMs+WM9gVuvk7CNd4SS10ApH22ORx+QsAZtszwKWddN5gXAGPHQfb3VoFd+JveAEris+vcvYR3uc29kvLfhG7RiFU+xNbA9cvSZogtFp890rS13GDY+E69jG+UfQvY3sFdon67Q94lV7cY6mKxw5YxE/2tkFZxvZf5PvOONod3FiP6faV5y38Ejj0fYzWfiWRz7N6wSHsIg7OHlq1BUfZW/LXnc4/xGdBJuoY27ACfxt/iznEtnjzt7BLF/w/pO4o+a74gt5Cb7N7e/FfWm5hljPj0EXLNeQb3bo+KSDptXkMIl58DBdl3MMi4dP+GBYL9qJ/cvvJb9afTTvUXobupTElwPuf3Kh2cIf84XoOH1M98uIrdV0q7pA8+gqruonOIk/IhohPAcT0wqNxx31Ux3xN02WGCT/cpZBfcK5RWL9+HqRz9CLS50XrFf61STW1CbljnG9+HvaVBfYPOSc4pxRHMjFxpvq3+HHs8+CT+C8ikure1bfaw7Oj6E2IFeiXZr7zrYNOEWdt4pfJObRK/hlGqHfo8ULnTa8F3yzGmxVzwtOpuFS56FfYIZN5zp+Am6oevE=
+  </data>
+ </layer>
+ <layer id="6" name="front" width="74" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt0sEJgDAMheHMUS91D6EdzTW8OUpHMwdvvTwwUqn/ByHQQ0rCMwMAAADwV3mzunp5bzP+BwAAAGA+R7EzFcvpWe/efG4evVsk36kuxSy6fG4bvVuk9MKN7jvto3eLRJ405ElDnjTkSUOeNORJQ540X83TBVYvbtA=
+  </data>
+ </layer>
+ <objectgroup id="7" name="meta" visible="0">
+  <object id="1" name="config" class="id=0;zoom_allowance=1;follow=horizontal" x="432" y="176" width="672" height="160"/>
+  <object id="2" name="lighting" class="shader=diffuse;intensity=1;gales_light_power=7" x="576" y="64" width="112" height="64"/>
+  <object id="3" name="level_art" x="704" y="64" width="96" height="64">
+   <properties>
+    <property name="bg_y" value="graphic=anuri_temple_02;add_x=0;add_y=0.39;scroll_x=.020"/>
+    <property name="bg_z" value="graphic=anuri_temple_01;add_x=0.1;add_y=0.21;scroll_x=0.022"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="objects">
+  <object id="4" name="end_door" class="id=0;facing=right" x="448" y="288" width="32" height="32"/>
+  <object id="8" name="enemy" class="type=p1_toad" x="864" y="432" width="32" height="16"/>
+  <object id="9" name="enemy" class="type=p1_toad" x="752" y="400" width="32" height="16"/>
+  <object id="10" name="enemy" class="type=p1_toad" x="624" y="416" width="32" height="16"/>
+  <object id="11" name="puzzle" class="type=p_liftdoor;profile=-2;puzzle_id=1;instruction=33,10,33,8" x="528" y="128" width="16" height="80"/>
+  <object id="13" name="puzzle" class="type=p_liftdoor;profile=-2;puzzle_id=2;instruction=33,22,33,18" x="528" y="320" width="16" height="80"/>
+  <object id="14" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=3;initial_state=1" x="608" y="400" width="48" height="16"/>
+  <object id="15" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=3;initial_state=1" x="736" y="384" width="48" height="16"/>
+  <object id="16" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=3;initial_state=1" x="864" y="416" width="48" height="16"/>
+  <object id="17" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=3;initial_state=1" x="736" y="480" width="48" height="16"/>
+  <object id="18" name="enemy" class="type=p1_toad" x="736" y="496" width="32" height="16"/>
+  <object id="19" name="enemy" class="type=p1_toad;name=frog" x="816" y="304" width="32" height="16"/>
+  <object id="20" name="door" class="profile=TOUCH_TRIGGER;open=P1_anuri_temple_03b;id=3" x="368" y="112" width="48" height="288"/>
+  <object id="21" name="end_door" class="id=3;facing=right" x="448" y="288" width="32" height="32"/>
+  <object id="22" name="loot" class="id=98;ql=SI_FALSE,ANURI_KEY_4_COLLECTED;collected_GIS=FILE_MARK_SI,ANURI_KEY_4_COLLECTED,true;name=SHINY_LOOT" x="1024" y="304" width="16" height="16"/>
+  <object id="27" name="bulb" class="intensity=1;color=ffcdff;follow_target=SHINY_LOOT" x="32" y="416" width="80" height="64">
+   <ellipse/>
+  </object>
+  <object id="28" name="bulb" class="intensity=1;color=ffffff;range=8;name=light1" x="976" y="176" width="64" height="48">
+   <ellipse/>
+  </object>
+  <object id="29" name="bulb" class="intensity=1;color=ffffff;range=8;name=light2" x="480" y="176" width="64" height="48">
+   <ellipse/>
+  </object>
+  <object id="30" name="water" class="type=P1_WAVY_WATER;sort_bg=bg_tiles,1;sort_fg=fg_tiles,100;use_rounded_corners;surface_color=78fde7;splash_color=8fffed" x="584" y="340" width="352" height="384"/>
+  <object id="32" name="AONC" class="type=P1_ANURI_CORPSE" x="944" y="288" width="32" height="32"/>
+  <object id="33" name="trigger" class="GIS=record_checkpoint,tmx(36/18),facing$keep" x="576" y="256" width="28" height="64"/>
+  <object id="34" name="trigger" class="GIS=record_checkpoint,tmx(58/18),facing$keep" x="916" y="256" width="28" height="64"/>
+  <object id="51" name="bulb2" class="intensity=8;z=-10;range=13;color=ffcdff;diameter=80" x="592" y="288" width="160" height="144">
+   <ellipse/>
+  </object>
+  <object id="52" name="bulb2" class="intensity=8;z=-10;range=13;color=ffcdff;diameter=80" x="752" y="288" width="160" height="144">
+   <ellipse/>
+  </object>
+  <object id="57" name="bulb2" class="intensity=8;z=-10;range=13;color=ffedc1;diameter=100" x="688" y="128" width="144" height="144">
+   <ellipse/>
+  </object>
+  <object id="59" name="bulb2" class="intensity=6;z=-8;range=10;color=ffa359;diameter=80" x="384" y="240" width="96" height="96">
+   <ellipse/>
+  </object>
+  <object id="60" name="bulb2" class="intensity=6;z=-8;range=10;color=ffcde1;diameter=80" x="976" y="256" width="112" height="96">
+   <ellipse/>
+  </object>
+  <object id="77" name="trigger" class="GIS=puzzle,id$1,msg$FLIP_ON|puzzle,id$2,msg$FLIP_ON|puzzle,id$3,msg$FLIP_OFF|puzzle,id$4,msg$FLIP_ON" x="1024" y="304" width="48" height="16"/>
+  <object id="79" name="puzzle" class="type=p_liftdoor;profile=-2;puzzle_id=1;instruction=61,10,61,8" x="976" y="128" width="16" height="80"/>
+  <object id="80" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=3;initial_state=1" x="864" y="464" width="48" height="16"/>
+  <object id="81" name="enemy" class="type=p1_toad" x="864" y="480" width="32" height="16"/>
+  <object id="82" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=3;initial_state=1" x="608" y="480" width="48" height="16"/>
+  <object id="85" name="puzzle" class="type=p_hitswitch;trigger_once;angle=90;profile=-1;GIS=ACTIVATE:puzzle,id$2,msg$FLIP_OFF|light_change,light2,intensity$0" x="496" y="192" width="32" height="16"/>
+  <object id="87" name="puzzle" class="type=p_hitswitch;trigger_once;profile=-1;angle=90;GIS=ACTIVATE:puzzle,id$1,msg$FLIP_ON|puzzle,id$4,msg$FLIP_OFF|light_change,light1,intensity$0" x="992" y="192" width="32" height="16"/>
+  <object id="88" name="puzzle" class="type=p_liftdoor;profile=-2;puzzle_id=4;instruction=34,22,34,18" x="544" y="320" width="16" height="80"/>
+ </objectgroup>
+ <objectgroup id="9" name="solid_collisions" visible="0">
+  <object id="35" x="256" y="320" width="352" height="432"/>
+  <object id="36" x="656" y="320" width="80" height="432"/>
+  <object id="37" x="784" y="320" width="80" height="432"/>
+  <object id="38" x="912" y="320" width="288" height="432"/>
+  <object id="39" x="256" y="32" width="944" height="144"/>
+  <object id="40" x="256" y="176" width="240" height="80"/>
+  <object id="41" x="1040" y="176" width="160" height="80"/>
+  <object id="42" x="1072" y="256" width="128" height="64"/>
+  <object id="43" x="496" y="208" width="64" height="48"/>
+  <object id="44" x="960" y="208" width="80" height="48"/>
+ </objectgroup>
+ <objectgroup id="10" name="animated" visible="0">
+  <object id="48" name="AT" class="sort=bg_tiles,-1;anim=23;use_all_bright;color=78fde7;scale=vec3(1/1/1)" x="608" y="272" width="48" height="65"/>
+  <object id="49" name="AT" class="sort=bg_tiles,-1;anim=23;use_all_bright;color=78fde7;scale=vec3(1/1/1)" x="608" y="176" width="48" height="65"/>
+  <object id="50" name="AT" class="sort=bg_tiles,50;anim=17;use_all_bright;color=78fde7" x="608" y="317" width="48" height="32"/>
+  <object id="54" name="AT" class="sprite=38;sort=fg_tiles,100;scale=vec3(2.5/2.5/1);color=ffa359;alpha=0.1" x="656" y="192" width="208" height="208">
+   <ellipse/>
+  </object>
+  <object id="55" name="AT" class="sort=bg_tiles,-1;anim=23;use_all_bright;color=78fde7;scale=vec3(1/1/1)" x="864" y="176" width="48" height="65"/>
+  <object id="56" name="AT" class="sort=bg_tiles,-1;anim=23;use_all_bright;color=78fde7;scale=vec3(1/1/1)" x="864" y="272" width="48" height="65"/>
+  <object id="58" name="AT" class="sort=bg_tiles,50;anim=17;use_all_bright;color=78fde7" x="864" y="320" width="48" height="32"/>
+ </objectgroup>
+</map>
