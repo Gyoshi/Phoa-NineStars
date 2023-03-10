@@ -20,6 +20,10 @@ for %%f in ("%temp_folder%\ModifiedLevels\*.xml") do (
 	powershell -Command "(gc %%f) -replace 'class', 'type' | Out-File -encoding ASCII %%f"
 )
 
+copy "bin\Debug\net3.5\NineStars.dll" "C:\Program Files (x86)\Steam\steamapps\common\Phoenotopia Awakening\Mods\NineStars\"
+copy Info.json "C:\Program Files (x86)\Steam\steamapps\common\Phoenotopia Awakening\Mods\NineStars\"
+copy %temp_folder%\ModifiedLevels "C:\Program Files (x86)\Steam\steamapps\common\Phoenotopia Awakening\Mods\NineStars\ModifiedLevels\"
+
 rem Zip folder
 powershell Compress-Archive -Update -Path %temp_folder%\* -DestinationPath PhoA-NineStars.zip
 

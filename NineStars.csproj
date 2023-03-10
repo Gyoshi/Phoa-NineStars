@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="call zip_build /Y&#xD;&#xA; call apply_mod" />
+    <Exec Command="call apply_and_zip" />
   </Target>
 
 </Project>
