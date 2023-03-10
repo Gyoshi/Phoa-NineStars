@@ -49,10 +49,6 @@
   <object id="5" name="end_door" class="id=5;facing=left" x="912" y="368" width="32" height="32"/>
   <object id="6" name="puzzle" class="type=p_weightswitch;profile=0;puzzle_id=1" x="448" y="400" width="16" height="16"/>
   <object id="7" name="puzzle" class="type=p_liftdoor;profile=-2;puzzle_id=1;instruction=20,23,20,27" x="320" y="336" width="16" height="80"/>
-  <object id="8" name="L" class="type=P1_ANURI_METAL_POT_S" x="704" y="416" width="16" height="16"/>
-  <object id="9" name="L" class="type=P1_ANURI_CERAMIC_POT_L" x="672" y="408" width="24" height="24"/>
-  <object id="10" name="L" class="type=P1_ANURI_CERAMIC_POT_S" x="592" y="416" width="16" height="16"/>
-  <object id="11" name="L" class="type=P1_ANURI_CERAMIC_POT_S" x="640" y="416" width="16" height="16"/>
   <object id="12" name="trigger" class="GIS=FILE_MARK_OC,solved_anuri_temple_02b" x="944" y="304" width="32" height="128"/>
   <object id="13" name="puzzle" class="type=p_liftdoor;profile=-2;puzzle_id=2;instruction=21,23,21,27" x="336" y="336" width="16" height="80"/>
   <object id="14" name="puzzle" class="type=p_weightswitch;profile=0;puzzle_id=3" x="432" y="176" width="16" height="16"/>
@@ -60,21 +56,17 @@
   <object id="16" name="puzzle" class="type=p_liftdoor;profile=-2;puzzle_id=3;instruction=19,23,19,27" x="304" y="336" width="16" height="80"/>
   <object id="17" name="end_door" class="id=0;facing=left" x="912" y="368" width="32" height="32"/>
   <object id="18" name="puzzle" class="type=p_fruit;profile=0;name=fruit1;ql=ALWAYS_TRUE" x="838.333" y="103.333" width="32" height="16"/>
-  <object id="19" name="puzzle" class="type=p_fruit;profile=0;name=fruit2" x="568" y="117" width="16" height="16"/>
   <object id="20" name="puzzle" class="type=p_fruit;profile=0;name=fruit3" x="696" y="279" width="16" height="16"/>
   <object id="24" name="puzzle" class="type=p_fallingplatform;profile=0;dir=LEFT" x="617" y="224" width="40" height="16"/>
   <object id="25" name="puzzle" class="type=p_fallingplatform;profile=1;dir=RIGHT" x="672" y="368" width="32" height="16"/>
   <object id="26" name="puzzle" class="type=p_fallingplatform;profile=0;dir=LEFT" x="686" y="208" width="40" height="16"/>
   <object id="32" name="AONC" class="type=P1_ANURI_CORPSE" x="368" y="160" width="48" height="32"/>
   <object id="33" name="AONC" class="type=P1_ANURI_SKULL" x="464" y="176" width="16" height="16"/>
-  <object id="34" name="L" class="type=P1_ANURI_CERAMIC_POT_S" x="560" y="416" width="32" height="16"/>
-  <object id="35" name="L" class="type=P1_ANURI_CERAMIC_POT_L;destroyed_GIS=SPAWN_enemy_at_pos,p1_toad|FILE_MARK_OC,anuri_temple_02ctoad1;ql=OC_ABSENT,anuri_temple_02ctoad1" x="604" y="392" width="24" height="24"/>
   <object id="36" name="L" class="type=P1_ANURI_METAL_POT_S" x="544" y="416" width="16" height="16"/>
   <object id="37" name="loot" class="id=98;ql=SI_FALSE,ANURI_KEY_5_COLLECTED;collected_GIS=FILE_MARK_SI,ANURI_KEY_5_COLLECTED,true;name=SHINY_LOOT" x="256" y="384" width="16" height="16"/>
   <object id="38" name="ladder" x="256" y="368">
    <polygon points="0,0 -16,0 -16,-64 0,-96 0,-128 32,-128 11,-48 6,-25"/>
   </object>
-  <object id="83" name="puzzle" class="type=p_fruit;profile=0;name=fruit4" x="536" y="298" width="16" height="16"/>
   <object id="163" name="trigger" class="GIS=cam_config_change,id$1,transition$smooth" x="144" y="208" width="16" height="80"/>
   <object id="164" name="trigger" class="GIS=cam_config_change,id$1,transition$smooth" x="128" y="208" width="16" height="80"/>
   <object id="165" name="trigger" class="GIS=cam_config_change,id$0,transition$smooth" x="208" y="208" width="16" height="80"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="68">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="69">
  <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
   <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
  </tileset>
@@ -93,6 +93,9 @@
   </object>
   <object id="65" name="L" class="ql=OC_PRESENT,solved_anuri_temple_02b;type=P1_ANURI_METAL_POT_L" x="428" y="353" width="32" height="32"/>
   <object id="67" name="trigger" class="GIS=FILE_MARK_OC,solved_anuri_temple_02b" x="407" y="203" width="96" height="128"/>
+  <object id="68" name="bulb" class="intensity=6;color=ffedc1;range=3;z=-1.5" x="416" y="112" width="80" height="64">
+   <ellipse/>
+  </object>
  </objectgroup>
  <objectgroup id="9" name="solid_collisions" visible="0">
   <object id="23" x="560" y="288" width="384" height="224"/>
