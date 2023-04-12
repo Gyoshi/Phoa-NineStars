@@ -5,9 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityModManagerNet;
+using static tk2dSpriteCollectionDefinition;
 
 namespace NineStars
 {
@@ -25,6 +27,8 @@ namespace NineStars
         public static float inverseSpeedUp = 1f / speedUp;
 
         public static int inventoryBinding = 2;
+
+        public const string nineStarsString = "<sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>";
 
         public static string modLevelsPath;
         public static string[] moddedLevels;
@@ -387,4 +391,48 @@ namespace NineStars
             PT2.save_file.OC_Write(object_code + "angry");
         }
     }
+
+    //OP menu stars
+    [HarmonyPatch(typeof(OpeningMenuLogic), "_STATE_GameTile")]
+    public static class OpeningMenuPatch
+    {
+        static FieldInfo timerField = AccessTools.Field(typeof(OpeningMenuLogic), "_fx_timer");
+        static float starTimer = 0f;
+        static float starPeriod = 3f;
+        public static void Postfix(ref OpeningMenuLogic __instance)
+        {
+            starTimer += Time.deltaTime;
+
+            string text = Main.nineStarsString;
+            text = "<size=9>" + text + "</size>";
+
+            if (!PT2.director.control.CONFIRM_PRESSED)
+            {
+                __instance.info_text.text = text + "\n<size=4>Demo</size>\n\n\n";
+                __instance.info_text.alpha = TiltedSine(2 * (float)Math.PI * starTimer / starPeriod);
+            }
+        }
+
+        public static float TiltedSine(float rad)
+        {
+            return (float)(0.4375f * Math.Sin(rad) - 0.109375f * Math.Sin(2 * rad) + 0.0208333f * Math.Sin(3 * rad) + 0.5f);
+        }
+    }
+
+    ////Difficulty select
+    //[HarmonyPatch(typeof(DB), "GetLine")]
+    //public static class DifficultySelectPatch
+    //{
+    //    public static void Prefix(string line_id_expression)
+    //    {
+    //        if (line_id_expression == "DIFF_CHOICE")
+    //        {
+
+    //            Regex regex = new Regex(@"\|\|.*?(<sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>).*?\|\|");
+    //            text = regex.Replace(text, regex, m => m.Groups[0].Value + Main.nineStarsString + m.Groups[2].Value);
+    //        }
+    //    }
+    //}
+
+    //"At <sprite=50><sprite=50><sprite=50>, the following combat perks will be active:\n\n<size=-5><#BDECFF>  - all health items can be instantly used from menu\n  - regular attacks will not drain energy</color></size>\n\n\nProceed?||No||Yes"
 }
