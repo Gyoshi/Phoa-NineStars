@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Security.Policy;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
@@ -40,7 +41,7 @@ namespace NineStars
             logger = modEntry.Logger;
 
             LevelMod_Patch.Load(modEntry);
-            DBLines_Patch.Load();
+            DB_Patch.Load();
 
             modEntry.OnUpdate = OnUpdate;
 #if DEBUG
@@ -429,14 +430,18 @@ namespace NineStars
         }
     }
 
-    // Custom Lines and Dialogue
-    [HarmonyPatch(typeof(DB), "_LoadDialogueAndCutsceneLines")]
-    public static class DBLines_Patch
+    // Custom Lines and Dialogue, etc.
+    [HarmonyPatch]
+    public static class DB_Patch
     {
-        private static string[] csvItems = {
+        private static string[] lines = {
             "ID,CODE,NAME,LINE,NOTES,TAGS",
-            "NS_DIFF_CHOICE,\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;AUTO_LOCK;CHOICE,*1*\",,\"<*_>.<*_>.<*_>.\\n\\n\\n||<*_><sprite=50><*_><sprite=50><*_><sprite=50><*_><sprite=50><*_><sprite=50><*__><sprite=50><*__><sprite=50><*__><sprite=50><*__><sprite=50>\",,",
-            ",\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;CHOICE,NS_DIFF_CHOICE,DIFF_CHOICE_SET+4\",,\"At <sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>, the following will be active:\\n\\n<size=-5><#FFECBD>  - Time is sped up, except for Gail\\n  - Health and Energy is severely limited\\n  - Puzzles are more difficult, and often unfair\\n  - And more... </color></size>\n\n\nProceed?||No||Yes\",,"
+            "NS_DIFF_CHOICE,\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;AUTO_LOCK;CHOICE,*1*\",,\"<*_>.<*_>.<*_>.<*____>\\n\\n\\n||<sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><*_><sprite=50><*__><sprite=50><*___><sprite=50><*____><sprite=50>\",,",
+            ",\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;CHOICE,NS_DIFF_CHOICE,DIFF_CHOICE_SET+4\",,\"At <sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>, the following will be active:\\n\\n<size=-5><#FFECBD>  - Time is sped up, except for Gail\\n  - Health and Energy is severely limited\\n  - Puzzles are more difficult, often unfair\\n  - And more... </color></size>\n\n\nProceed?||No||Yes\",,",
+        };
+        private static string[] misc = {
+            "BASE,TRANSLATE_SWITCH,TRANSLATE_PC,NOTES",
+            "NS_PAUSE_TUT,<sprite=11> or <sprite=10> :{0}{0}Pause repeatedly,@-Options or @-Inventory :{0}{0}Pause Repeatedly,",
         };
 
         private static string SPLIT_RE = ",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))";
@@ -444,10 +449,55 @@ namespace NineStars
         private static char[] TRIM_CHARS = new char[] { '"' };
 
         public static List<Dictionary<string, string>> lineData;
+        public static List<Dictionary<string, string>> miscData;
 
         public static void Load()
         {
-            lineData = ReadCSV(csvItems);
+            lineData = ReadCSV(lines);
+            miscData = ReadCSV(misc);
+        }
+
+        static IEnumerable<MethodBase> TargetMethods()
+        {
+            return AccessTools.GetDeclaredMethods(typeof(DB))
+                .Where(method => (new string[] {
+                    "_LoadDialogueAndCutsceneLines",
+                    "_LoadTranslateMap",
+                }).Any(method.Name.Contains))
+                .Cast<MethodBase>();
+        }
+
+        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, MethodBase __originalMethod)
+        {
+            int counter = int.MinValue;
+            string csvData;
+            switch (__originalMethod.Name)
+            {
+                case "_LoadDialogueAndCutsceneLines":
+                    csvData = "lineData";
+                    break;
+                case "_LoadTranslateMap":
+                    csvData = "miscData";
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            foreach (var instruction in instructions)
+            {
+                if (instruction.opcode == OpCodes.Call && instruction.operand == CodeInstruction.Call(typeof(CSVReader), "Read").operand)
+                {
+                    counter = 0;
+                }
+
+                if (counter == 2)
+                {
+                    yield return new CodeInstruction(OpCodes.Ldloc_1);
+                    yield return CodeInstruction.LoadField(typeof(DB_Patch), csvData);
+                    yield return CodeInstruction.Call(typeof(List<Dictionary<string, string>>), "AddRange");
+                }
+                yield return instruction;
+                counter++;
+            }
         }
 
         public static List<Dictionary<string, string>> ReadCSV(string[] array) //Copied from CSVReader.Read()
@@ -474,30 +524,6 @@ namespace NineStars
                 list.Add(dictionary);
             }
             return list;
-        }
-
-        public static void AppendModData(List<Dictionary<string, string>> data)
-        {
-            data.AddRange(lineData);
-        }
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
-        {
-            int counter = int.MinValue;
-            foreach (var instruction in instructions)
-            {
-                if (instruction.opcode == OpCodes.Call && instruction.operand == CodeInstruction.Call(typeof(CSVReader), "Read").operand)
-                {
-                    counter = 0;
-                }
-
-                if (counter == 2)
-                {
-                    yield return new CodeInstruction(OpCodes.Ldloc_1);
-                    yield return CodeInstruction.Call(typeof(DBLines_Patch), "AppendModData");
-                }
-                yield return instruction;
-                counter++;
-            }
         }
     }
 
