@@ -55,6 +55,7 @@ namespace NineStars
         static bool Unload(UnityModManager.ModEntry modEntry)
         {
             harmony.UnpatchAll(modEntry.Info.Id);
+            DB.LoadGameData(false);
 
             return true;
         }
@@ -513,28 +514,35 @@ namespace NineStars
     }
 
     // Food Nerf
-    [HarmonyPatch(typeof(GaleInteracter), "Apply_TIDAL_effects")]
+    [HarmonyPatch(typeof(DB), "_LoadItemDefinitions")]
     public static class Food_Patch
     {
         public static string HalveString(string str)
         {
-            Main.logger.Log("Food hp : " + str);
             int value = int.Parse(str);
             value = (value == 250) ? 250 : (value / 2 + 1);
+            if (value > 20 && value % 10 == 1) 
+                value -= 1;
 
-            Main.logger.Log("New hp : " + value);
             return value.ToString();
         }
-        public static void Prefix(ref string tidal_EFFECT_string)
+        public static void Postfix()
         {
-            Main.logger.Log("Old string : " + tidal_EFFECT_string);
-            var regex = new Regex(@"(hp,)([0-9]*)");
-            tidal_EFFECT_string = regex.Replace(tidal_EFFECT_string, m => m.Groups[1].Value + HalveString(m.Groups[2].Value));
-
-            Main.logger.Log("New string : " + tidal_EFFECT_string);
+            var regex = new Regex(@"(hp,)(-?[0-9]*)");
+            for (int i = 0; i < DB.ITEM_DEFS.Length; i++)
+            {
+                var item = DB.ITEM_DEFS[i];
+                if (item.commands == null) 
+                    continue;
+                item.commands = regex.Replace(item.commands, m => m.Groups[1].Value + HalveString(m.Groups[2].Value));
+                DB.ITEM_DEFS[i] = item;
+            }
         }
-
-        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+    }
+    [HarmonyPatch(typeof(GaleInteracter), "Apply_TIDAL_effects")]
+    public static class Eat_Patch
+        {
+            public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             foreach (var instruction in instructions)
             {
