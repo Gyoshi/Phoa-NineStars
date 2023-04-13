@@ -578,4 +578,20 @@ namespace NineStars
             }
         }
     }
+
+    // Schadenfreude
+    [HarmonyPatch(typeof(DirectorLogic), "_OptionsExecuteCmd")]
+    public static class AccessMenu_Patch
+    {
+        public static bool Prefix(string cmd_option)
+        {
+            if (cmd_option == "_OPT_ACCESS_D")
+            {
+                PT2.director.QuitToDesktop();
+                DB.TRANSLATE_map["_OPT_ACCESS_D"] = Main.nineStarsString;
+                return false;
+            }
+            return true;
+        }
+    }
 }
