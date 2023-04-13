@@ -512,4 +512,36 @@ namespace NineStars
         }
     }
 
+    // Food Nerf
+    [HarmonyPatch(typeof(GaleInteracter), "Apply_TIDAL_effects")]
+    public static class Food_Patch
+    {
+        public static string HalveString(string str)
+        {
+            Main.logger.Log("Food hp : " + str);
+            int value = int.Parse(str);
+            value = (value == 250) ? 250 : (value / 2 + 1);
+
+            Main.logger.Log("New hp : " + value);
+            return value.ToString();
+        }
+        public static void Prefix(ref string tidal_EFFECT_string)
+        {
+            Main.logger.Log("Old string : " + tidal_EFFECT_string);
+            var regex = new Regex(@"(hp,)([0-9]*)");
+            tidal_EFFECT_string = regex.Replace(tidal_EFFECT_string, m => m.Groups[1].Value + HalveString(m.Groups[2].Value));
+
+            Main.logger.Log("New string : " + tidal_EFFECT_string);
+        }
+
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        {
+            foreach (var instruction in instructions)
+            {
+                if (instruction.opcode == OpCodes.Ldc_I4_S && instruction.operand.ToString() == "50")
+                    instruction.operand = 25; // Reduce threshold for healing sound effect
+                yield return instruction;
+            }
+        }
+    }
 }
