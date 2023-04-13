@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using Mono.Cecil.Cil;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -442,13 +443,13 @@ namespace NineStars
         private static char[] TRIM_CHARS = new char[] { '"' };
 
         public static List<Dictionary<string, string>> lineData;
-        
+
         public static void Load()
         {
             lineData = ReadCSV(csvItems);
         }
 
-        public static List<Dictionary<string, string>> ReadCSV (string[] array) //Copied from CSVReader.Read()
+        public static List<Dictionary<string, string>> ReadCSV(string[] array) //Copied from CSVReader.Read()
         {
             List<Dictionary<string, string>> list = new List<Dictionary<string, string>>();
 
@@ -498,4 +499,17 @@ namespace NineStars
             }
         }
     }
+
+    // Drowning Damage
+    [HarmonyPatch(typeof(GaleLogicOne), "_STATE_Drowning")]
+    public static class Drown_Patch
+    {
+        public static void Prefix()
+        {
+            Hitbox.AttackStat attack = DB.AT_map["drowning"];
+            attack.damage_amount = PT2.gale_interacter.stats.max_hp / 5 + 2;
+            DB.AT_map["drowning"] = attack;
+        }
+    }
+
 }
