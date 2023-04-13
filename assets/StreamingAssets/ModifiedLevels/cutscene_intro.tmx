@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="32" height="64" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="51">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
+  <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
+ </tileset>
+ <layer id="1" name="back" width="32" height="64">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMBKHL/smXY6Dgqqmqqqqqqqqqrx8PtBA9
+  </data>
+ </layer>
+ <layer id="2" name="back" width="32" height="64">
+  <data encoding="base64" compression="zlib">
+   eJztzbEJAAAMw7CQ/4/uF6GDDJ7VJLUfvIrP5/P5fD6fz+fz+Xw+n8/n8/l8Pp/PX/j2+gOuwAUJ
+  </data>
+ </layer>
+ <layer id="3" name="front" width="32" height="64" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMBKH7/qWXY6Dgqqmqqqqqqqqqrx83gAgB
+  </data>
+ </layer>
+ <objectgroup id="4" name="meta">
+  <object id="1" name="config" class="id=0;follow=vertical;no_zoom=0" x="80" y="96" width="352" height="832"/>
+  <object id="5" name="memory" x="-48" y="256" width="80" height="48">
+   <properties>
+    <property name="_snd_packs" value="p_scorp,p_lizard,p_bird,p_mouse"/>
+    <property name="_snd_solos" value="company_sfx_logo"/>
+    <property name="prefabs" value="p_scorp,p_lizard,p_bird,p_mouse"/>
+   </properties>
+  </object>
+  <object id="33" name="music" x="-48" y="320" width="80" height="48">
+   <properties>
+    <property name="1" value="p1_intro_sequence,vol=0"/>
+   </properties>
+  </object>
+  <object id="37" name="level_art" x="-48" y="192" width="80" height="48">
+   <properties>
+    <property name="bg_x" value="graphic=p1_panselo_bg_02;add_x=0;add_y=0.48;scroll_x=.008"/>
+    <property name="bg_y" value="graphic=p1_panselo_bg_clouds;add_x=0;add_y=-0.03;scroll_x=.008;auto_scroll_x=0.012"/>
+    <property name="bg_z" value="graphic=p1_panselo_bg_01;add_x=0;add_y=0.5;scroll_x=0.012"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="solid_collisions" visible="0">
+  <object id="21" x="-48" y="0" width="96" height="1024"/>
+  <object id="22" x="48" y="944" width="416" height="80"/>
+  <object id="23" x="464" y="0" width="96" height="1024"/>
+  <object id="24" x="48" y="0" width="416" height="80"/>
+ </objectgroup>
+ <objectgroup id="6" name="_objects_NO_DIFF_SELECT">
+  <object id="7" name="end_door" class="id=0;facing=keep" x="224" y="144" width="32" height="32"/>
+  <object id="31" name="end_door" class="id=9000;facing=keep" x="256" y="144" width="32" height="32"/>
+  <object id="32" name="trigger" class="GIS=hud_off_screen|cutscene,line$CG_CUTSCENE_1" x="48" y="448" width="416" height="144"/>
+  <object id="34" name="door" class="profile=TOUCH_TRIGGER;open=p1_panselo_house_01_gale;id=4501" x="0" y="912" width="512" height="112"/>
+  <object id="38" name="trigger" class="GIS=hud_off_screen" x="48" y="112" width="416" height="128"/>
+ </objectgroup>
+ <objectgroup id="7" name="objects_WITH_DIFF_SELECT">
+  <object id="40" name="end_door" class="id=0;facing=keep" x="224" y="144" width="32" height="32"/>
+  <object id="41" name="end_door" class="id=9000;facing=keep" x="256" y="144" width="32" height="32"/>
+  <object id="42" name="trigger" class="GIS=hud_off_screen|cutscene,line$CG_CUTSCENE_1" x="48" y="608" width="416" height="144"/>
+  <object id="43" name="door" class="profile=TOUCH_TRIGGER;open=p1_panselo_house_01_gale;id=4501" x="0" y="912" width="512" height="112"/>
+  <object id="44" name="trigger" class="GIS=hud_off_screen" x="48" y="112" width="416" height="128"/>
+  <object id="45" name="trigger" class="GIS=hud_off_screen|cutscene,line$NS_DIFF_CHOICE" x="48" y="320" width="416" height="32"/>
+ </objectgroup>
+</map>

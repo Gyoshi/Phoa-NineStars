@@ -10,6 +10,7 @@ using TMPro;
 using UnityEngine;
 using UnityModManagerNet;
 using static tk2dSpriteCollectionDefinition;
+using static UnityModManagerNet.UnityModManager;
 
 namespace NineStars
 {
@@ -30,20 +31,15 @@ namespace NineStars
 
         public const string nineStarsString = "<sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>";
 
-        public static string modLevelsPath;
-        public static string[] moddedLevels;
-
         public static Harmony harmony;
         public static UnityModManager.ModEntry.ModLogger logger;
 
         static void Load(UnityModManager.ModEntry modEntry)
         {
             logger = modEntry.Logger;
-            modLevelsPath = Path.Combine(modEntry.Path, "ModifiedLevels");
 
-            moddedLevels = Directory.GetFiles(modLevelsPath);
-            for (int i = 0; i < moddedLevels.Length; i++)
-                moddedLevels[i] = Path.GetFileNameWithoutExtension(moddedLevels[i]);
+            LevelMod_Patch.Load(modEntry);
+            DBLines_Patch.Load();
 
             modEntry.OnUpdate = OnUpdate;
 #if DEBUG
@@ -364,13 +360,25 @@ namespace NineStars
     [HarmonyPatch(typeof(LevelBuildLogic), "_LoadLevel")]
     public static class LevelMod_Patch
     {
+        public static string modLevelsPath;
+        public static string[] moddedLevels;
+
         static FieldInfo levelPathPrefixField = AccessTools.Field(typeof(LevelBuildLogic), "_level_path_prefix");
+
+        public static void Load(ModEntry modEntry)
+        {
+            modLevelsPath = Path.Combine(modEntry.Path, "ModifiedLevels");
+
+            moddedLevels = Directory.GetFiles(modLevelsPath);
+            for (int i = 0; i < moddedLevels.Length; i++)
+                moddedLevels[i] = Path.GetFileNameWithoutExtension(moddedLevels[i]);
+        }
         public static void Prefix(ref LevelBuildLogic __instance, string new_level_name)
         {
-            Main.logger.Log("Loading level : " + new_level_name);
-            if (Main.moddedLevels.Contains(new_level_name.ToLower()))
+            //Main.logger.Log("Loading level : " + new_level_name);
+            if (moddedLevels.Contains(new_level_name.ToLower()))
             {
-                levelPathPrefixField.SetValue(__instance, Main.modLevelsPath + "/");
+                levelPathPrefixField.SetValue(__instance, modLevelsPath + "/");
             }
         }
         public static void Postfix(ref LevelBuildLogic __instance)
@@ -392,7 +400,7 @@ namespace NineStars
         }
     }
 
-    //OP menu stars
+    // Opening menu stars
     [HarmonyPatch(typeof(OpeningMenuLogic), "_STATE_GameTile")]
     public static class OpeningMenuPatch
     {
@@ -408,7 +416,7 @@ namespace NineStars
 
             if (!PT2.director.control.CONFIRM_PRESSED)
             {
-                __instance.info_text.text = text + "\n<size=4>Demo</size>\n\n\n";
+                __instance.info_text.text = text + "\n<size=7>Demo</size>\n\n\n";
                 __instance.info_text.alpha = TiltedSine(2 * (float)Math.PI * starTimer / starPeriod);
             }
         }
@@ -419,20 +427,75 @@ namespace NineStars
         }
     }
 
-    ////Difficulty select
-    //[HarmonyPatch(typeof(DB), "GetLine")]
-    //public static class DifficultySelectPatch
-    //{
-    //    public static void Prefix(string line_id_expression)
-    //    {
-    //        if (line_id_expression == "DIFF_CHOICE")
-    //        {
+    // Custom Lines and Dialogue
+    [HarmonyPatch(typeof(DB), "_LoadDialogueAndCutsceneLines")]
+    public static class DBLines_Patch
+    {
+        private static string[] csvItems = {
+            "ID,CODE,NAME,LINE,NOTES,TAGS",
+            "NS_DIFF_CHOICE,\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;AUTO_LOCK;CHOICE,*1*\",,\"<*_>.<*_>.<*_>.\\n\\n\\n||<*_><sprite=50><*_><sprite=50><*_><sprite=50><*_><sprite=50><*_><sprite=50><*__><sprite=50><*__><sprite=50><*__><sprite=50><*__><sprite=50>\",,",
+            ",\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;CHOICE,NS_DIFF_CHOICE,DIFF_CHOICE_SET+4\",,\"At <sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>, the following will be active:\\n\\n<size=-5><#FFECBD>  - Time is sped up, except for Gail\\n  - Health and Energy is severely limited\\n  - Puzzles are unfairly difficult\\n  - And more... </color></size>\n\n\nProceed?||No||Yes\",,"
+        };
 
-    //            Regex regex = new Regex(@"\|\|.*?(<sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>).*?\|\|");
-    //            text = regex.Replace(text, regex, m => m.Groups[0].Value + Main.nineStarsString + m.Groups[2].Value);
-    //        }
-    //    }
-    //}
+        private static string SPLIT_RE = ",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))";
+        private static string LINE_SPLIT_RE = "\\r\\n|\\n\\r|\\n|\\r";
+        private static char[] TRIM_CHARS = new char[] { '"' };
 
-    //"At <sprite=50><sprite=50><sprite=50>, the following combat perks will be active:\n\n<size=-5><#BDECFF>  - all health items can be instantly used from menu\n  - regular attacks will not drain energy</color></size>\n\n\nProceed?||No||Yes"
+        public static List<Dictionary<string, string>> lineData;
+        
+        public static void Load()
+        {
+            lineData = ReadCSV(csvItems);
+        }
+
+        public static List<Dictionary<string, string>> ReadCSV (string[] array) //Copied from CSVReader.Read()
+        {
+            List<Dictionary<string, string>> list = new List<Dictionary<string, string>>();
+
+            if (array.Length <= 1)
+            {
+                return list;
+            }
+            string[] array2 = Regex.Split(array[0], SPLIT_RE);
+            for (int i = 1; i < array.Length; i++)
+            {
+                string[] array3 = Regex.Split(array[i], SPLIT_RE);
+                Dictionary<string, string> dictionary = new Dictionary<string, string>();
+                int num = 0;
+                while (num < array2.Length && num < array3.Length)
+                {
+                    string text = array3[num];
+                    text = text.TrimStart(TRIM_CHARS).TrimEnd(TRIM_CHARS);
+                    dictionary[array2[num]] = text;
+                    num++;
+                }
+                list.Add(dictionary);
+            }
+            return list;
+        }
+
+        public static void AppendModData(List<Dictionary<string, string>> data)
+        {
+            data.AddRange(lineData);
+        }
+        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        {
+            int counter = int.MinValue;
+            foreach (var instruction in instructions)
+            {
+                if (instruction.opcode == OpCodes.Call && instruction.operand == CodeInstruction.Call(typeof(CSVReader), "Read").operand)
+                {
+                    counter = 0;
+                }
+
+                if (counter == 2)
+                {
+                    yield return new CodeInstruction(OpCodes.Ldloc_1);
+                    yield return CodeInstruction.Call(typeof(DBLines_Patch), "AppendModData");
+                }
+                yield return instruction;
+                counter++;
+            }
+        }
+    }
 }
