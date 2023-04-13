@@ -434,7 +434,7 @@ namespace NineStars
         private static string[] csvItems = {
             "ID,CODE,NAME,LINE,NOTES,TAGS",
             "NS_DIFF_CHOICE,\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;AUTO_LOCK;CHOICE,*1*\",,\"<*_>.<*_>.<*_>.\\n\\n\\n||<*_><sprite=50><*_><sprite=50><*_><sprite=50><*_><sprite=50><*_><sprite=50><*__><sprite=50><*__><sprite=50><*__><sprite=50><*__><sprite=50>\",,",
-            ",\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;CHOICE,NS_DIFF_CHOICE,DIFF_CHOICE_SET+4\",,\"At <sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>, the following will be active:\\n\\n<size=-5><#FFECBD>  - Time is sped up, except for Gail\\n  - Health and Energy is severely limited\\n  - Puzzles are unfairly difficult\\n  - And more... </color></size>\n\n\nProceed?||No||Yes\",,"
+            ",\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;CHOICE,NS_DIFF_CHOICE,DIFF_CHOICE_SET+4\",,\"At <sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>, the following will be active:\\n\\n<size=-5><#FFECBD>  - Time is sped up, except for Gail\\n  - Health and Energy is severely limited\\n  - Puzzles are more difficult, and often unfair\\n  - And more... </color></size>\n\n\nProceed?||No||Yes\",,"
         };
 
         private static string SPLIT_RE = ",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))";
