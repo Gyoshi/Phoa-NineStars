@@ -38,7 +38,7 @@ namespace NineStars
 
 #if DEBUG
             modEntry.OnUnload = Unload;
-            Harmony.DEBUG = true;
+            Harmony.DEBUG = false;
 #endif
             modEntry.OnToggle = OnToggle;
 
