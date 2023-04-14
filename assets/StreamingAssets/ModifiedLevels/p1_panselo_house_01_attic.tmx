@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="40" height="32" tilewidth="16" tileheight="16" infinite="0" nextobjectid="52">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
+  <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
+ </tileset>
+ <layer name="back" width="40" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztk20KwjAMhnMYUQQZDNb93lE8Sg7jNo/Ro5m0jUrn8IMWBr4/HsKadyULz5qOqAEAAADAJjm2Ac54dfYRpeebhdERX1yoJJWv3aNKnycXcynDqcf5e5otPd9B7t7160g/zPcuZ9ni+4vfPsgOvOzEa03Pg1Q/p/lSLs8sshX8+8UzWqOGf+qSemTVHBvjGZmPljG24N831PDP5ts7OqtD6pLsxpwyx/ypDzu7u/fcs3dq+Gf/R427AQAAgH/jBuNpO1c=
+  </data>
+ </layer>
+ <layer name="back" width="40" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztzjEKwCAQBdHtcwnBJkUa9YLbexVzx4iVIKSJKMZ58BEslhEBAAAru4KY2Q1vVuw7bJmOr2mdof2LtkyHx+C3khdNLr8f1r2pun37/vcBANjJAxwIFzU=
+  </data>
+ </layer>
+ <layer name="back" width="40" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztk0EOgjAUROc8QiNQAi452j+Ka2XHBTyak5q6UGtsApbFvGQyLD6fl7QAQgghhNgjroP9Mld7nDN2/p0cvxLs3W/mPZhb9rcUONdI3b3FPqWcYTmaHmj70JaacSOsGgEmzFzYnmfKJN9Zi6Onm4exrUl4XgferyG0VSfYgVnot7z4jRv40mui38S+8T9FTITPlhPn09/KxT12Pp3W3C2EEEJswR1xIDbH
+  </data>
+ </layer>
+ <layer name="back" width="40" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlDsOgkAURW/vDqwsLESkcAyOQLR3SXav9LMDNmCiodFGV2b8FL4wJgqZAs0QLN5JbsKbmVwOUwAIgiAIgvBv+AoYKNArKMW2VjncTS4cM0c9pU6XXVT1bKtb7WxTfhv2W3NWnOWH6znM58b9vuh02UVpD5j389CvPWpY6HRG+f4uCSiI7WdPIXBP3vMxAmUT83xgv+u0Pr/UA7U9+/3tNeihzd6N/dXYrI9i/pYI2HXMvJjV4+dr/l/x+wNd3NvqPFZnQRAEQRDsPAEHqDyA
+  </data>
+ </layer>
+ <layer name="front" width="40" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztzsENgCAMBdBuo1dO1G0cpeO4AboNo/hBTYiRi9EQ439J02pRvggRERHRPaoig25zQJ9VDN3SM96b7jP6iN1Yfrtgd5xHjzgTn86H/6Z7Lh33p9kjWzjlK2EX/Qv56J96l8ta56iZXC5rnaOmc7msdQ4iIqIvWQFspx6z
+  </data>
+ </layer>
+ <objectgroup name="meta" visible="0">
+  <object id="1" name="config" type="id=0;follow=horizontal;no_zoom=0" x="112" y="160" width="416" height="192"/>
+  <object id="23" name="lighting" type="shader=diffuse;intensity=0.8;gales_light_power=5;ql=SI_TRUE,NIGHT;color=a0a0ff" x="208" y="80" width="80" height="48"/>
+  <object id="24" name="lighting" type="shader=diffuse;intensity=0.8;gales_light_power=5;ql=SI_FALSE,NIGHT" x="112" y="80" width="80" height="48"/>
+ </objectgroup>
+ <objectgroup name="solid_collisions" visible="0">
+  <object id="15" x="64" y="0" width="512" height="208"/>
+  <object id="16" x="480" y="208" width="96" height="112"/>
+  <object id="17" x="208" y="320" width="368" height="112"/>
+  <object id="18" x="64" y="208" width="96" height="224"/>
+  <object id="19" x="304" y="208" width="16" height="32"/>
+  <object id="20" type="profile=WOOD" x="178" y="288">
+   <polyline points="-18,0 28,0"/>
+  </object>
+  <object id="21" type="profile=WOOD" x="210" y="304">
+   <polyline points="-50,0 28,0"/>
+  </object>
+  <object id="30" x="304" y="256" width="160" height="16"/>
+  <object id="51" x="160" y="336" width="48" height="96"/>
+ </objectgroup>
+ <objectgroup name="objects" visible="0">
+  <object id="3" name="end_door" type="id=0;facing=right" x="256" y="288" width="32" height="32"/>
+  <object id="11" name="door" type="profile=NONE_FRONT;open=p1_panselo_house_01_hall;id=7" x="264" y="288" width="16" height="32"/>
+  <object id="12" name="end_door" type="id=7;facing=right" x="256" y="288" width="32" height="32"/>
+  <object id="26" name="bulb" type="intensity=4;color=dcceff;range=4;z=-2" x="240" y="272" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="32" name="L" type="type=P1_CHEST_S;destroyed_GIS=SPAWN_pickup,P1_RAI,35|FILE_MARK_SI,PANSELO_MONEY_5,true;ql=SI_FALSE,PANSELO_MONEY_5" x="338" y="240" width="16" height="16"/>
+  <object id="42" name="L" type="type=P1_WOOD_L;name=BOX2;ql=ALWAYS_TRUE;destroyed_GIS=FILE_MARK_OC,phouse1_attic_2" x="448" y="288" width="32" height="32"/>
+  <object id="43" name="L" type="name=box_metal;type=P1_METAL_S" x="240" y="-16" width="16" height="16"/>
+  <object id="44" name="L" type="type=P1_WOOD_L;name=BOX1;ql=ALWAYS_TRUE;destroyed_GIS=FILE_MARK_OC,phouse1_attic_1" x="400" y="288" width="32" height="32"/>
+  <object id="45" name="L" type="type=P1_WIDE_WOOD;name=BOX3;ql=ALWAYS_TRUE;destroyed_GIS=put,box_metal,name(BOX3)|FILE_MARK_OC,phouse1_attic_3" x="160" y="304" width="48" height="32"/>
+  <object id="46" name="bulb" type="intensity=2;color=ffedc1;follow_target=BOX1;range=3;z=-1.5" x="336" y="-64" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="47" name="bulb" type="intensity=2;color=dcceff;follow_target=BOX2;range=3;z=-1.5" x="400" y="-64" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="48" name="bulb" type="intensity=2;color=ffedc1;follow_target=BOX3;range=3;z=-1.5" x="464" y="-64" width="64" height="64">
+   <ellipse/>
+  </object>
+  <object id="49" name="bulb" type="intensity=2;color=ffedc1;follow_target=box_metal;range=2;z=-1.5" x="224" y="-32" width="48" height="48">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>
