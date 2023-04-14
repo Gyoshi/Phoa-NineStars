@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using UnityEngine;
 using UnityModManagerNet;
 
 namespace NineStars
@@ -35,26 +36,48 @@ namespace NineStars
             LevelMod_Patch.Load(modEntry);
             DB_Patch.Load();
 
-            modEntry.OnUpdate = OnUpdate;
 #if DEBUG
             modEntry.OnUnload = Unload;
             Harmony.DEBUG = true;
 #endif
+            modEntry.OnToggle = OnToggle;
+
+            modEntry.OnUpdate = OnUpdate;
             harmony = new Harmony(modEntry.Info.Id);
-            harmony.PatchAll();
-
-            DB.LoadGameData(false);
-
         }
-#if DEBUG
         static bool Unload(UnityModManager.ModEntry modEntry)
         {
             harmony.UnpatchAll(modEntry.Info.Id);
-            DB.LoadGameData(false);
+            return true;
+        }
+        static bool OnToggle(UnityModManager.ModEntry modEntry, bool value)
+        {
+            logger.Log("___OnToggle " + value);
+            
+            if (value)
+                harmony.PatchAll();
+            else
+                harmony.UnpatchAll(modEntry.Info.Id);
+            
+            if (LevelBuildLogic.level_name == null)
+                return true;
+
+            //PT2.LoadLevel("limbo", 0, Vector3.zero, true, 0f, false, true);
+            if (LevelBuildLogic.level_name == "game_start")
+            {
+                PT2.director.current_opening_menu.GameStart();
+                PT2.director.current_opening_menu = null;
+                //PT2.director.current_opening_menu.Initialize();
+            }
+            DB.ReloadGameData();
+            SaveFile.file_0_string_data = null;
+            SaveFile.file_1_string_data = null;
+            SaveFile.file_2_string_data = null;
+            SaveFile.file_3_string_data = null;
+            PT2.director.QuitToTitleScreen();
 
             return true;
         }
-#endif
 
         static void OnUpdate(UnityModManager.ModEntry modEntry, float dt)
         {
