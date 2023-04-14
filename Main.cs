@@ -43,6 +43,8 @@ namespace NineStars
             harmony = new Harmony(modEntry.Info.Id);
             harmony.PatchAll();
 
+            DB.LoadGameData(false);
+
         }
 #if DEBUG
         static bool Unload(UnityModManager.ModEntry modEntry)
@@ -151,6 +153,18 @@ namespace NineStars
         {
             if (!filename.StartsWith("settings"))
                 filename = "NineStars_" + filename;
+        }
+    }
+
+    // Thanks for playing Demo
+    [HarmonyPatch(typeof(DB), "GetLine")]
+    public static class DemoEnd_Patch
+    {
+        public static void Prefix(ref string line_id_expression)
+        {
+            int[] statusInventory = (int[])AccessTools.Field(typeof(SaveFile), "_status_inventory").GetValue(PT2.save_file);
+            if (line_id_expression == "DEATH_SCRIPT" && statusInventory[262 - 232] == 21)
+                line_id_expression = "NS_DEMO_END";
         }
     }
 }
