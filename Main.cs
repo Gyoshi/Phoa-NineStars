@@ -1,18 +1,10 @@
 ﻿using HarmonyLib;
-using Mono.Cecil.Cil;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Reflection.Emit;
-using System.Security.Policy;
-using System.Text.RegularExpressions;
-using TMPro;
-using UnityEngine;
 using UnityModManagerNet;
-using static tk2dSpriteCollectionDefinition;
-using static UnityModManagerNet.UnityModManager;
 
 namespace NineStars
 {
@@ -139,6 +131,26 @@ namespace NineStars
                 return false;
             }
             return true;
+        }
+    }
+
+    // Separate Save Files
+    [HarmonyPatch]
+    public static class SaveData_Patch
+    {
+        static IEnumerable<MethodBase> TargetMethods()
+        {
+            return AccessTools.GetDeclaredMethods(typeof(SaveDataHandler))
+                .Where(method => (new string[] {
+                    "save",
+                    "load",
+                }).Any(method.Name.Contains))
+                .Cast<MethodBase>();
+        }
+        public static void Prefix(ref string filename)
+        {
+            if (!filename.StartsWith("settings"))
+                filename = "NineStars_" + filename;
         }
     }
 }
