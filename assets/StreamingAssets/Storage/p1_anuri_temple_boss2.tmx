@@ -44,7 +44,7 @@
    eJzt111SgzAQwPE8yiVqeoTWV4f2KB6F8YleQoMn4Sgcxd0maWMmaqtURvj/ZjINw0fCboCtMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATOu+nnoGGIPbmcH61kw9F4znledzVrqFPJ9vC163q9pY+a66qecxpq7269Y+mv3at176/bSzOrvlvOb4TV3P8J4u5WZ470v5rgDAX8hrWCd1navP79lSjSv7zfPD1/Wv7s/GaYoHXjivS2vta8eZG6l5TjRPaV0n/WONK7WjWfum/caGc3SfK8Qvrw31ut2V/33ya5fGyucVjjN2ZxarS+5d45DWddIv1rgunKP7JH77amPsYWOMNum7eI0Yf7v7uG6qcFzclvOadDteO10X6XY+XnbeaX7fkf+XdjXj57kUh7zG1Vi2If6dj7HG9eluK3mVdkjiK7nu43V13VQhB63Phwt5adqt6eV3SMdI10WcR9z+bLxw3FVeZpzPS0icnySGvfz2uu18njSu+9a307OWv3c1D5KDQY4Z9PzWb/eSG+3rNYc4RpXktzCH4ngYVyHXTbo/PFfD4Zy3Y17Sc34zHm4vfusq/36NuRumnhd+hmcIAAAAAAAAAPCfvANxoKDm
   </data>
  </layer>
- <objectgroup id="8" name="meta" visible="0">
+ <objectgroup id="8" name="meta">
   <object id="3" name="music" x="240" y="288" width="96" height="144">
    <properties>
     <property name="1. no conditions on this one" value="p1_boss_battle,vol=0"/>
@@ -62,7 +62,7 @@
   <object id="12" name="GIS_PACK" x="352" y="288" width="96" height="144">
    <properties>
     <property name="0-close gate" value="puzzle,id$6,msg$FLIP_ON|put,start_slime,tmx(67/44.35)"/>
-    <property name="1-lil_slime_killed_boss_awakes" value="DELAY,1|puzzle,id$1,msg$FLIP_OFF|uncommon_sfx,slime_boss_grunt3|action_shake,duration$1,intensity$0.03125|DELAY,1|uncommon_sfx,slime_boss_move|DELAY,1|send_message,boss_slime,awaken|DELAY,2.35|music_adjust,p1_boss_battle,vol$1,rate$10|send_message,boss_slime,get_life_bar"/>
+    <property name="1-lil_slime_killed_boss_awakes" value="DELAY,1|uncommon_sfx,slime_boss_grunt3|action_shake,duration$1,intensity$0.03125|DELAY,1|uncommon_sfx,slime_boss_move|DELAY,1|send_message,boss_slime,awaken|DELAY,2.35|music_adjust,p1_boss_battle,vol$1,rate$10|send_message,boss_slime,get_life_bar"/>
     <property name="2-boss_defeated" value="music_adjust,p1_boss_battle,vol$0|DELAY,1.5|global_uncommon_sfx,victory_fanfare|DELAY,5|GIS_PAK,3"/>
     <property name="3-open_all_doors" value="FILE_MARK_SI,BOSS_SLIME_DEFEATED,true|action_shake,duration$1.5|puzzle,id$5,msg$FLIP_ON|puzzle,id$6,msg$FLIP_OFF"/>
    </properties>
@@ -116,7 +116,7 @@
   <object id="99" name="bulb" class="range=6;intensity=2;color=ffcdff;follow_target=boss_slime" x="704" y="896" width="80" height="64">
    <ellipse/>
   </object>
-  <object id="104" name="enemy" class="name=start_slime;type=p1_slime;defeated_GIS=GIS_PAK,1;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="1152" y="192" width="32" height="16"/>
+  <object id="104" name="enemy" class="name=start_slime;type=p1_slime;defeated_GIS=GIS_PAK,1|SPAWN_enemy,p1_slime,tmx(41.5/20)|SPAWN_enemy,p1_slime,tmx(45.5/19)|SPAWN_enemy,p1_slime,tmx(48/0)|SPAWN_enemy,p1_slime,tmx(51/20)|SPAWN_enemy,p1_slime,tmx(54.5/9)|SPAWN_enemy,p1_slime,tmx(57/19)|SPAWN_enemy,p1_slime,tmx(61/20)|SPAWN_enemy,p1_slime,tmx(59/16);ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="1152" y="192" width="32" height="16"/>
   <object id="108" name="trigger" class="remove;GIS=GIS_PAK,0;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="688" y="544" width="32" height="176"/>
   <object id="110" name="end_door" class="id=12;facing=right;config=1" x="704" y="368" width="32" height="32"/>
   <object id="115" name="bulb2" class="intensity=6;z=-11;range=13;color=ffedc1;diameter=80" x="640" y="496" width="96" height="96">
@@ -158,21 +158,6 @@
   <object id="147" name="bulb2" class="intensity=8;z=-12;range=14;color=ffedc1;diameter=80" x="224" y="640" width="96" height="96">
    <ellipse/>
   </object>
-  <object id="159" name="enemy" class="type=p1_slime;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="656" y="304" width="32" height="16"/>
-  <object id="160" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=1;initial_state=1" x="656" y="336" width="48" height="16"/>
-  <object id="161" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=1;initial_state=1" x="704" y="320" width="48" height="16"/>
-  <object id="162" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=1;initial_state=1" x="752" y="336" width="48" height="16"/>
-  <object id="163" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=1;initial_state=1" x="800" y="336" width="48" height="16"/>
-  <object id="164" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=1;initial_state=1" x="848" y="321.5" width="48" height="16"/>
-  <object id="165" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=1;initial_state=1" x="896" y="320" width="48" height="16"/>
-  <object id="166" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=1;initial_state=1" x="944" y="336" width="48" height="16"/>
-  <object id="167" name="puzzle" class="type=p_solidwall;profile=0;puzzle_id=1;initial_state=1" x="992" y="336" width="48" height="16"/>
-  <object id="168" name="enemy" class="type=p1_slime;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="720" y="304" width="32" height="16"/>
-  <object id="169" name="enemy" class="type=p1_slime;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="768" y="304" width="16" height="16"/>
-  <object id="170" name="enemy" class="type=p1_slime;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="816" y="304" width="16" height="16"/>
-  <object id="171" name="enemy" class="type=p1_slime;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="864" y="304" width="32" height="16"/>
-  <object id="172" name="enemy" class="type=p1_slime;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="912" y="304" width="16" height="16"/>
-  <object id="173" name="enemy" class="type=p1_slime;ql=SI_FALSE,BOSS_SLIME_DEFEATED" x="976" y="304" width="16" height="16"/>
   <object id="174" name="enemy" class="type=p1_slime;instruction=hang" x="576" y="592" width="32" height="16"/>
   <object id="175" name="enemy" class="type=p1_slime;instruction=hang" x="624" y="544" width="32" height="16"/>
   <object id="176" name="enemy" class="type=p1_slime;instruction=hang" x="1008" y="544" width="32" height="16"/>
