@@ -33,7 +33,7 @@ namespace NineStars
             bool ukemi = PT2.director.control.num_frames_since_last_SPRINT_PRESSED < (int)(7 * Main.speedUp);
             if (fallingTime > 0.67f && !ukemi)
             {
-                int damage = (int)(fallingTime * 3.2f) - 1;
+                int damage = (int)(fallingTime * 5f - 2.25f); // increments around after 7.5,9,13 tiles
                 damage = (damage > 3) ? 3 : damage;
                 Main.IncurDamage(damage, true);
 
