@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="100" height="64" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="203">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="100" height="64" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="201">
  <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="16384" columns="128">
   <image source="../../Textures/tiles.PNG" width="2048" height="2048"/>
  </tileset>
@@ -58,7 +58,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="7" name="objects_all">
+ <objectgroup id="7" name="objects_all" visible="0">
   <object id="10" name="door" class="profile=TOUCH_TRIGGER;open=P1_duri_forest_03;id=4" x="96" y="0" width="64" height="816"/>
   <object id="11" name="end_door" class="id=4;facing=right" x="192" y="720" width="32" height="32"/>
   <object id="12" name="end_door" class="id=0;facing=right" x="192" y="720" width="32" height="32"/>
@@ -70,6 +70,7 @@
    <polygon points="-16,0 16,8 48,8 64,32 64,88 32,112 32,128 64,160 64,192 0,192 16,88 48,64 48,48 -16,32"/>
   </object>
   <object id="33" name="L" class="type=P1_CHEST_S;ql=SI_FALSE,D_FOREST_MONEY_1;destroyed_GIS=SPAWN_pickup,P1_RAI,35|FILE_MARK_SI,D_FOREST_MONEY_1,true|CONTINUE_IF,NAME_EXISTS,crawl_tut|put,crawl_tut,vec3(0/0/0)" x="560" y="752" width="32" height="16"/>
+  <object id="113" name="puzzle" class="type=p_fruit;profile=0" x="414" y="440" width="16" height="16"/>
   <object id="173" name="bulb2" class="intensity=6;z=-8;range=10;color=ffa359;diameter=70" x="144" y="704" width="64" height="64">
    <ellipse/>
   </object>
@@ -151,7 +152,6 @@
   <object id="198" name="bulb2" class="intensity=6;z=-8;range=10;color=ffedc1;diameter=60" x="635" y="426" width="112" height="112">
    <ellipse/>
   </object>
-  <object id="202" name="puzzle" class="type=p_fruit;profile=0;instruction=jump_on_me" x="414" y="440" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="9" name="objects_night" visible="0">
   <properties>
