@@ -69,7 +69,7 @@
   <object id="32" name="ladder" x="960" y="480">
    <polygon points="-16,0 16,8 48,8 64,32 64,88 32,112 32,128 64,160 64,192 0,192 16,88 48,64 48,48 -16,32"/>
   </object>
-  <object id="33" name="L" class="type=P1_CHEST_S;ql=SI_FALSE,D_FOREST_MONEY_1;destroyed_GIS=SPAWN_pickup,P1_RAI,35|FILE_MARK_SI,D_FOREST_MONEY_1,true|CONTINUE_IF,NAME_EXISTS,crawl_tut|put,crawl_tut,vec3(0/0/0)" x="560" y="752" width="32" height="16"/>
+  <object id="33" name="L" class="type=P1_CHEST_S;ql=SI_FALSE,D_FOREST_MONEY_1;destroyed_GIS=SPAWN_pickup,P1_RAI,35|FILE_MARK_SI,D_FOREST_MONEY_1,true|CONTINUE_IF,NAME_EXISTS,crawl_tut|put,crawl_tut,vec3(0/0/0)" x="560" y="768" width="32" height="16"/>
   <object id="173" name="bulb2" class="intensity=6;z=-8;range=10;color=ffa359;diameter=70" x="144" y="704" width="64" height="64">
    <ellipse/>
   </object>
@@ -83,7 +83,7 @@
   <object id="192" name="bulb" class="intensity=3;color=ffedc1;range=5;z=-2" x="800" y="416" width="64" height="64">
    <ellipse/>
   </object>
-  <object id="196" name="L" class="type=P1_METAL_S" x="560" y="768" width="32" height="16"/>
+  <object id="196" name="L" class="type=P1_METAL_S" x="432" y="768" width="32" height="16"/>
  </objectgroup>
  <objectgroup id="8" name="objects_day">
   <properties>
@@ -364,7 +364,7 @@
    <ellipse/>
   </object>
  </objectgroup>
- <objectgroup id="13" name="animated_day">
+ <objectgroup id="13" name="animated_day" visible="0">
   <properties>
    <property name="ql" value="SI_FALSE,NIGHT"/>
   </properties>

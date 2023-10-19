@@ -93,7 +93,7 @@
   <object id="107" x="512" y="80" width="35.6364" height="23.3333"/>
   <object id="108" x="560" y="120.5" width="16" height="23.5"/>
   <object id="157" x="848" y="128" width="24" height="16"/>
-  <object id="160" x="896" y="80" width="32" height="48"/>
+  <object id="160" x="896" y="80" width="32" height="47"/>
   <object id="163" x="896" y="224" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="9" name="objects">
