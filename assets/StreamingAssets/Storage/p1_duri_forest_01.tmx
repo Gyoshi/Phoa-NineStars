@@ -33,7 +33,7 @@
    eJztl01ugzAQhS11UbhFrkCqqF32KDmKl/YZ2gVHyVE4Sgf8w2NMEiI1RKD3SaO44Eyo3/xhDCGEEEIIIYQQQgghhBBCCCGEEELItqkbY3wwm0yu2Vc/F3k+vfZOrDrKWsxHc4yBzfP7eVu/pL3obXtzwYwLfzMGNs7PV3kNav2gveS8raL2KQ7StaEWNKZb/cF3Rn0y5v302jyKuts5zVPOu1D7Layp/xORuLCVWIwPI+shVtSezNuHsWJ5fdc/zHSpzkNu55qPvd/peGhM+3//8f5Rs3T+XLOP1lDf/ah1nvHk/kXsrLTG3m898/8h9JlDToU8WzhL1WXsXI2f9Jt4r1Z9XdXzYS172mHfqHcHcTKpB8z/++h3qNQ7J3OUmqeTzre0m+h2Za/2Kz4Pcu3goJ5rfzjrRevkWutCHHSq/nerHuYGkTM6Qz/N517MUnCeWruZdzF8Jw9+1F643/Z+tQ8//q6Fz0nv1/2e9f9xYs5prfMZe6gJ6TxFq28f+vAl+jhjvsN3i3k87fUhZ3OdjnFYPIuu/3O+52YB6r+MXv9b57iknoKmE52KGAr6H8B/ntOh9l97p5urSboXYNyw/xNCCCFkl/wB1EpNlg==
   </data>
  </layer>
- <objectgroup id="7" name="meta">
+ <objectgroup id="7" name="meta" visible="0">
   <object id="1" name="config" class="id=0;zoom_allowance=1;follow=horizontal" x="256" y="144" width="816" height="272"/>
   <object id="2" name="level_art" class="ql=SI_FALSE,NIGHT" x="432" y="16" width="144" height="64">
    <properties>
@@ -82,7 +82,7 @@
   <object id="153" name="puzzle" class="type=p_fruit;profile=0" x="976" y="208" width="16" height="32"/>
   <object id="154" name="puzzle" class="type=p_fruit;profile=0" x="887" y="208" width="16" height="32"/>
  </objectgroup>
- <objectgroup id="9" name="objects_day" visible="0">
+ <objectgroup id="9" name="objects_day">
   <properties>
    <property name="ql" value="SI_FALSE,NIGHT"/>
   </properties>
@@ -140,7 +140,7 @@
    <ellipse/>
   </object>
  </objectgroup>
- <objectgroup id="11" name="objects_npcs_b4_abduction">
+ <objectgroup id="11" name="objects_npcs_b4_abduction" visible="0">
   <properties>
    <property name="ql" value="SI_FALSE,ABDUCTION_HAPPENED"/>
   </properties>
