@@ -87,17 +87,12 @@ namespace NineStars
 
         public static void IncurDamage(int damage, bool lethal = false)
         {
-            damage = (PT2.gale_interacter.stats.hp <= damage) ? (PT2.gale_interacter.stats.hp - (lethal ? 0 : 1)) : damage;
-
-            PT2.gale_interacter.stats.hp -= damage;
-            PT2.hud_heart.J_UpdateHealth(PT2.gale_interacter.stats.hp, PT2.gale_interacter.stats.max_hp, false, false);
             PT2.gale_interacter.DisplayNumAboveHead(damage, DamageNumberLogic.DISPLAY_STYLE.GALE_DAMAGE, true);
 
-            if (PT2.gale_interacter.stats.hp <= 0)
-                goToStateMethod.Invoke(PT2.gale_script, new object[] { Enum.Parse(galeStateEnum, "DYING"), 0f });
+            damage = (PT2.gale_interacter.stats.hp <= damage) ? (PT2.gale_interacter.stats.hp - (lethal ? 0 : 1)) : damage;
+            PT2.gale_interacter.stats.hp -= damage;
+            PT2.hud_heart.J_UpdateHealth(PT2.gale_interacter.stats.hp, PT2.gale_interacter.stats.max_hp, false, false);
         }
-        static MethodInfo goToStateMethod = AccessTools.Method(typeof(GaleLogicOne), "_GoToState");
-        static Type galeStateEnum = AccessTools.Inner(typeof(GaleLogicOne), "GALE_STATE");
 
         public static bool UseStamina(float amount, bool checkEnough = false)
         {
