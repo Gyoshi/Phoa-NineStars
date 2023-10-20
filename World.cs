@@ -54,12 +54,15 @@ namespace NineStars
             "ID,CODE,NAME,LINE,NOTES,TAGS",
             "NS_DIFF_CHOICE,\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;AUTO_LOCK;CHOICE,*1*\",,\"<*_>.<*_>.<*_>.<*____>\\n\\n\\n||<sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><*_><sprite=50><*__><sprite=50><*___><sprite=50><*____><sprite=50>\",,",
             ",\"PROFILE,static;TXT_BOX_WIDTH,1000;VOICE,static;POS,0.5,0.5;CHOICE,NS_DIFF_CHOICE,DIFF_CHOICE_SET+4\",,\"At <sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50><sprite=50>, the following will be active:\\n\\n<size=-5><#FFECBD>  - Time is sped up, except for Gail\\n  - Health and Energy is severely limited\\n  - Puzzles are more difficult, often unfair\\n  - And more... </color></size>\n\n\nProceed?||No||Yes\",,",
-            "NS_DEMO_END,\"GIS,GB_TIMER_DISMISS;PROFILE,naked;OWNER,gale;VOICE,silence;POS,0.5,0.6;AUTO_LOCK;CHOICE,DEATH_SCRIPT2,DEATH_SCRIPT+2\",," +
-                "\"<size=+5><#fac637>Thank you for playing the 9<sprite=50> Demo!</color></size>\\n         \\n" +
-                "<size=-10><#FFECBD>I've had a lot of fun modifying the levels to spark the same challenge as in my first playthrough, to show off unintended mechanics, or simply to test your precise platforming. Some rooms also needed to be modified to be possible at all under the speeding up of time.\\n\\n" +
-                "But there is a lot to this game! I can't do it all on my own. So if you think modifying levels - like the ones you have seen - could be fun (or if you want to create a mod with entirely new levels!), shoot me a message on the Phoenotopia Fan Discord anytime.\\n" +
+            "NS_DEMO_END,\"GIS,GB_TIMER_DISMISS;PROFILE,naked;OWNER,gale;VOICE,static;POS,0.5,0.6;AUTO_LOCK;CHOICE,DEATH_SCRIPT2,DEATH_SCRIPT+2\",," +
+                "\"<size=+5><#fac637>Thank you for playing the 9<sprite=50> Demo!</color></size>                                          \\n" +
+                "<size=-10><#fac637>                 You are now a certified gamer <sprite=30></color></size>\\n                                                                \\n" +
+                "<size=-10><#FFECBD>Unfortunately, I must confess that this demo will likely forever stay simply a demo.         \\n\\n" +
+                "I've had a lot of fun modifying the levels, trying to spark the same challenge as I felt in my first playthrough. But there is a lot to this game!   \\n" +
+                "I can't do it all on my own, and so this is likely the final state of the 9<sprite=50> mod.    \\n" +
+                "But if you want to help expand this world anyway, or want some help with things you can't achieve with the map editor alone, shoot me a message on the Phoenotopia Fan Discord anytime.\\n" +
                 "</color></size>                                                                       - Gyoshi\\n" +
-                "                                                                       ||Reload last Save Point||Quit to Title Screen\",Note to self: Couldn't get PAUSE to work with CHOICES. Hence why I use a newline and a lot of spaces",
+                "                                                                       ||Reload last Save Point||Quit to Title Screen\",",
         };//               
         private static string[] misc = {
             "BASE,TRANSLATE_SWITCH,TRANSLATE_PC,NOTES",
