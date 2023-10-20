@@ -16,8 +16,8 @@ namespace NineStars
     {
         public static int startHP = 10;
         public static float startEnergy = 60f;
-        public static int rubyHP = 1;
-        public static float gemEnergy = 5f;
+        public static int rubyHP = 2; // Should be 1 on non-demo
+        public static float gemEnergy = 10f; // Should be 5f on non-demo
 
         public static float speedUp = 1.34164f;
         public static float inverseSpeedUp = 1f / speedUp;
