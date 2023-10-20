@@ -143,7 +143,7 @@ namespace NineStars
         }
     }
 
-    // Schadenfreude
+    // Schadenfreude & Lighting
     [HarmonyPatch(typeof(DirectorLogic), "_OptionsExecuteCmd")]
     public static class AccessMenu_Patch
     {
@@ -153,6 +153,12 @@ namespace NineStars
             {
                 PT2.director.QuitToDesktop();
                 DB.TRANSLATE_map["_OPT_ACCESS_D"] = Main.nineStarsString;
+                return false;
+            }
+            else if (cmd_option == "__OPT_ACCESS_LIGHTING")
+            {
+                PT2.sound_g.PlayGlobalCommonSfx(134, 1f, 1f, 2);
+                DB.TRANSLATE_map["__OPT_ACCESS_LIGHTING"] = Main.nineStarsString;
                 return false;
             }
             return true;
