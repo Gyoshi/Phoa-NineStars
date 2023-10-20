@@ -49,7 +49,6 @@ namespace NineStars
     {
         public static bool Prefix(object new_state)
         {
-            Main.logger.Log(new_state.ToString());
             bool dying = new_state.ToString() == "DYING";
             bool limbo = LevelBuildLogic.level_name == "limbo";
             if (!dying && !limbo && PT2.gale_interacter.stats.hp <= 0)
