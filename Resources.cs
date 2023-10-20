@@ -59,6 +59,14 @@ namespace NineStars
             maxHpText.text = PT2.gale_interacter.stats.max_hp.ToString();
         }
     }
+        [HarmonyPatch(typeof(SaveFile), "_SummonGameOverScreen")]
+    public static class SilenceDeathBlare_Patch
+    {
+        public static void Prefix()
+        {
+            PT2.hud_heart.ForceCancelBlareSfx();
+        }
+    }
 
     // Halve effect of energy buff
     [HarmonyPatch(typeof(GaleLogicOne), "VariableUpdate")]

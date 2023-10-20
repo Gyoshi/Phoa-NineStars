@@ -191,4 +191,16 @@ namespace NineStars
                 line_id_expression = "NS_DEMO_END";
         }
     }
+    [HarmonyPatch(typeof(SaveFile), "_SummonGameOverScreen")]
+    public static class DemoEndAudio_Patch
+    {
+        public static void Prefix()
+        {
+            int[] statusInventory = (int[])AccessTools.Field(typeof(SaveFile), "_status_inventory").GetValue(PT2.save_file);
+            if (statusInventory[262 - 232] == 21)
+            {
+                PT2.sound_g.PlayMusic("humble_hamlet");
+            }
+        }
+    }
 }
