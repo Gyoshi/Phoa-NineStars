@@ -1,0 +1,2 @@
+BASE,TRANSLATE_SWITCH,TRANSLATE_PC,NOTES
+NS_PAUSE_TUT,<sprite=11> or <sprite=10> :{0}{0}Pause repeatedly,@-Options or @-Inventory :{0}{0}Pause Repeatedly,

@@ -34,7 +34,7 @@ namespace NineStars
             logger = modEntry.Logger;
 
             LevelMod_Patch.Load(modEntry);
-            DB_Patch.Load();
+            DB_Patch.Load(modEntry);
 
 #if DEBUG
             modEntry.OnUnload = Unload;
@@ -124,10 +124,11 @@ namespace NineStars
 
             string text = Main.nineStarsString;
             text = "<size=9>" + text + "</size>";
+            string demoText = DB.GAME_LANGUAGE == "JAPANESE" ? "体験版" : "Demo";
 
             if (!PT2.director.control.CONFIRM_PRESSED)
             {
-                __instance.info_text.text = text + "\n<size=7>Demo</size>\n\n\n";
+                __instance.info_text.text = text + "\n<size=7>" + demoText + "</size>\n\n\n";
                 __instance.info_text.alpha = TiltedSine(2 * (float)Math.PI * starTimer / starPeriod);
             }
         }
